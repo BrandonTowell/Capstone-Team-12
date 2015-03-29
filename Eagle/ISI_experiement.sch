@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -4632,9 +4632,9 @@ SMD tunable RF coil'</description>
 <instance part="GND1" gate="1" x="68.58" y="20.32"/>
 <instance part="P+1" gate="VCC" x="25" y="42"/>
 <instance part="IC1" gate="P" x="22" y="30"/>
-<instance part="U1" gate="G$2" x="83.82" y="119.38"/>
-<instance part="U2" gate="G$1" x="69.5" y="115.7"/>
-<instance part="U2" gate="G$5" x="86.36" y="99.06"/>
+<instance part="U1" gate="G$2" x="20.32" y="81.28"/>
+<instance part="U2" gate="G$1" x="66.96" y="120.78"/>
+<instance part="U2" gate="G$5" x="83.82" y="83.82"/>
 <instance part="U1" gate="G$1" x="20.7" y="108"/>
 </instances>
 <busses>
@@ -4731,22 +4731,6 @@ SMD tunable RF coil'</description>
 <segment>
 <pinref part="IC1" gate="P" pin="VDD"/>
 <wire x1="19.46" y1="37.62" x2="19" y2="38.608" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="I0"/>
-<wire x1="30.66" y1="122" x2="56.6" y2="118.6" width="0.1524" layer="91"/>
-<wire x1="56.6" y1="118.6" x2="57.5" y2="117.7" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="1Q"/>
-</segment>
-</net>
-<net name="N$9" class="0">
-<segment>
-<wire x1="57.5" y1="113.7" x2="56.3" y2="115.6" width="0.1524" layer="91"/>
-<wire x1="56.3" y1="115.6" x2="30.66" y2="119" width="0.1524" layer="91"/>
-<pinref part="U2" gate="G$1" pin="I1"/>
-<pinref part="U1" gate="G$1" pin="2Q"/>
 </segment>
 </net>
 </nets>
