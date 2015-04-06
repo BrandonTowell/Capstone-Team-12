@@ -8136,7 +8136,7 @@ SMD tunable RF coil'</description>
 <instance part="GND12" gate="1" x="388.62" y="187.96"/>
 <instance part="SJ1" gate="1" x="215.9" y="185.42" rot="R90"/>
 <instance part="SJ2" gate="1" x="388.62" y="195.58" rot="R90"/>
-<instance part="GND14" gate="1" x="193.04" y="185.42"/>
+<instance part="GND14" gate="1" x="193.04" y="182.88"/>
 <instance part="GND13" gate="1" x="205.74" y="182.88"/>
 <instance part="IC7" gate="A" x="33.02" y="33.02"/>
 <instance part="IC7" gate="B" x="121.92" y="33.02"/>
@@ -8202,6 +8202,8 @@ SMD tunable RF coil'</description>
 <instance part="RC7" gate="G$1" x="368.3" y="116.84" rot="R180"/>
 <instance part="RC8" gate="G$1" x="368.3" y="109.22" rot="R180"/>
 <instance part="RC9" gate="G$1" x="368.3" y="101.6" rot="R180"/>
+<instance part="DEL" gate="P" x="365.76" y="83.82"/>
+<instance part="COUNTER" gate="P" x="350.52" y="83.82"/>
 </instances>
 <busses>
 </busses>
@@ -8230,6 +8232,7 @@ SMD tunable RF coil'</description>
 <wire x1="48.26" y1="254" x2="48.26" y2="248.92" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="A" pin="Q2"/>
 <wire x1="48.26" y1="248.92" x2="43.18" y2="248.92" width="0.1524" layer="91"/>
+<label x="43.18" y="248.92" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="Q6" class="0">
@@ -8294,6 +8297,7 @@ SMD tunable RF coil'</description>
 <segment>
 <pinref part="JP8" gate="A" pin="1"/>
 <wire x1="17.78" y1="129.54" x2="12.7" y2="129.54" width="0.1524" layer="91"/>
+<label x="7.62" y="129.54" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="O_LFSR1" class="0">
@@ -8401,7 +8405,8 @@ SMD tunable RF coil'</description>
 </segment>
 <segment>
 <pinref part="IC7" gate="P" pin="GND"/>
-<wire x1="15.24" y1="43.18" x2="22.86" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="43.18" x2="17.78" y2="43.18" width="0.1524" layer="91"/>
+<label x="17.78" y="40.64" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="IC3" gate="A" pin="D7"/>
@@ -8485,8 +8490,32 @@ SMD tunable RF coil'</description>
 <wire x1="226.06" y1="81.28" x2="226.06" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="GND22" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="DEL" gate="P" pin="GND@4"/>
+<wire x1="373.38" y1="76.2" x2="373.38" y2="73.66" width="0.1524" layer="91"/>
+<label x="373.38" y="73.66" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="C2" gate="G$1" pin="2"/>
+<pinref part="GND14" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="A" pin="OC"/>
+<wire x1="17.78" y1="228.6" x2="12.7" y2="228.6" width="0.1524" layer="91"/>
+<label x="12.7" y="228.6" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC3" gate="A" pin="OC"/>
+<wire x1="17.78" y1="193.04" x2="12.7" y2="193.04" width="0.1524" layer="91"/>
+<label x="12.7" y="193.04" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC4" gate="A" pin="OC"/>
+<wire x1="17.78" y1="157.48" x2="15.24" y2="157.48" width="0.1524" layer="91"/>
+<label x="12.7" y="157.48" size="1.778" layer="95"/>
+</segment>
 </net>
-<net name="JNC" class="0">
+<net name="VCC_3V" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="OUT"/>
 <wire x1="281.94" y1="180.34" x2="271.78" y2="180.34" width="0.1524" layer="91"/>
@@ -8965,7 +8994,34 @@ SMD tunable RF coil'</description>
 <pinref part="IC7" gate="C" pin="I"/>
 </segment>
 </net>
-<net name="VCC_5V" class="0">
+<net name="N$5" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="TRI-STATE"/>
+<wire x1="210.82" y1="81.28" x2="210.82" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="73.66" x2="185.42" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="RC1" gate="G$1" pin="1"/>
+<wire x1="185.42" y1="73.66" x2="185.42" y2="93.98" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="VCC" class="0">
+<segment>
+<pinref part="RC1" gate="G$1" pin="2"/>
+<wire x1="185.42" y1="104.14" x2="185.42" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="129.54" x2="226.06" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="129.54" x2="226.06" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="121.92" x2="226.06" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="129.54" x2="226.06" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="P+1" gate="VCC" pin="VCC"/>
+<junction x="226.06" y="129.54"/>
+<pinref part="U$2" gate="G$1" pin="VCC"/>
+<junction x="226.06" y="121.92"/>
+</segment>
+<segment>
+<pinref part="COUNTER" gate="A" pin="LD"/>
+<wire x1="254" y1="91.44" x2="241.3" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="241.3" y1="91.44" x2="241.3" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="P+2" gate="VCC" pin="VCC"/>
+</segment>
 <segment>
 <pinref part="USBMINI" gate="G$1" pin="VBUS"/>
 <wire x1="182.88" y1="195.58" x2="193.04" y2="195.58" width="0.1524" layer="91"/>
@@ -8998,21 +9054,7 @@ SMD tunable RF coil'</description>
 <junction x="205.74" y="195.58"/>
 <junction x="193.04" y="195.58"/>
 <junction x="261.62" y="195.58"/>
-</segment>
-<segment>
-<pinref part="IC2" gate="P" pin="VCC"/>
-<wire x1="162.56" y1="134.62" x2="162.56" y2="137.16" width="0.1524" layer="91"/>
-<label x="162.56" y="137.16" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="IC7" gate="P" pin="VCC"/>
-<wire x1="15.24" y1="58.42" x2="22.86" y2="58.42" width="0.1524" layer="91"/>
-<label x="20.32" y="55.88" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="IC5" gate="P" pin="VCC"/>
-<wire x1="93.98" y1="231.14" x2="93.98" y2="233.68" width="0.1524" layer="91"/>
-<label x="93.98" y="233.68" size="1.778" layer="95"/>
+<label x="185.42" y="198.12" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="P" pin="VCC@2"/>
@@ -9029,41 +9071,30 @@ SMD tunable RF coil'</description>
 <wire x1="121.92" y1="261.62" x2="121.92" y2="264.16" width="0.1524" layer="91"/>
 <label x="121.92" y="264.16" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="VCC-5V" class="0">
+<segment>
+<pinref part="IC5" gate="P" pin="VCC"/>
+<wire x1="93.98" y1="231.14" x2="93.98" y2="233.68" width="0.1524" layer="91"/>
+<label x="93.98" y="233.68" size="1.778" layer="95"/>
+</segment>
 <segment>
 <pinref part="IC6" gate="P" pin="VCC"/>
 <wire x1="111.76" y1="180.34" x2="111.76" y2="185.42" width="0.1524" layer="91"/>
 <label x="111.76" y="185.42" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="N$5" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="TRI-STATE"/>
-<wire x1="210.82" y1="81.28" x2="210.82" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="73.66" x2="185.42" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="RC1" gate="G$1" pin="1"/>
-<wire x1="185.42" y1="73.66" x2="185.42" y2="93.98" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="VCC" class="0">
-<segment>
-<pinref part="RC1" gate="G$1" pin="2"/>
-<wire x1="185.42" y1="104.14" x2="185.42" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="185.42" y1="129.54" x2="226.06" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="226.06" y1="129.54" x2="226.06" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="226.06" y1="121.92" x2="226.06" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="226.06" y1="129.54" x2="226.06" y2="134.62" width="0.1524" layer="91"/>
-<pinref part="P+1" gate="VCC" pin="VCC"/>
-<junction x="226.06" y="129.54"/>
-<pinref part="U$2" gate="G$1" pin="VCC"/>
-<junction x="226.06" y="121.92"/>
+<pinref part="IC2" gate="P" pin="VCC"/>
+<wire x1="162.56" y1="134.62" x2="162.56" y2="137.16" width="0.1524" layer="91"/>
+<label x="162.56" y="137.16" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="COUNTER" gate="A" pin="LD"/>
-<wire x1="254" y1="91.44" x2="241.3" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="241.3" y1="91.44" x2="241.3" y2="134.62" width="0.1524" layer="91"/>
-<pinref part="P+2" gate="VCC" pin="VCC"/>
+<pinref part="IC7" gate="P" pin="VCC"/>
+<wire x1="15.24" y1="58.42" x2="17.78" y2="58.42" width="0.1524" layer="91"/>
+<label x="20.32" y="55.88" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="DEL" gate="P" pin="VCC@2"/>
+<wire x1="368.3" y1="91.44" x2="368.3" y2="93.98" width="0.1524" layer="91"/>
+<label x="368.3" y="91.44" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -9176,6 +9207,7 @@ SMD tunable RF coil'</description>
 <junction x="327.66" y="106.68"/>
 <junction x="327.66" y="109.22"/>
 <junction x="327.66" y="111.76"/>
+<junction x="327.66" y="114.3"/>
 </segment>
 </net>
 <net name="N$33" class="0">
@@ -9260,6 +9292,26 @@ SMD tunable RF coil'</description>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="114,1,342.9,107.886,DEL,B,A4,,,"/>
+<approved hash="114,1,342.9,107.886,DEL,B,A3,,,"/>
+<approved hash="114,1,342.9,107.886,DEL,B,A2,,,"/>
+<approved hash="114,1,342.9,107.886,DEL,B,A1,,,"/>
+<approved hash="114,1,342.9,107.886,DEL,B,G,,,"/>
+<approved hash="113,1,174.625,191.791,USBMINI,,,,,"/>
+<approved hash="113,1,376.242,194.31,LED1,,,,,"/>
+<approved hash="113,1,214.384,185.42,SJ1,,,,,"/>
+<approved hash="113,1,387.104,195.58,SJ2,,,,,"/>
+<approved hash="113,1,81.6695,37.1586,JP1,,,,,"/>
+<approved hash="113,1,49.2014,20.7095,JP2,,,,,"/>
+<approved hash="113,1,90.4986,30.0905,JP3,,,,,"/>
+<approved hash="113,1,13.0895,34.6186,JP4,,,,,"/>
+<approved hash="113,1,18.1695,131.139,JP8,,,,,"/>
+<approved hash="113,1,18.1695,111.435,JP11,,,,,"/>
+<approved hash="113,1,18.1695,90.4986,JP9,,,,,"/>
+<approved hash="113,1,18.1695,75.2586,JP5,,,,,"/>
+<approved hash="113,1,313.648,111.891,JP6,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>
