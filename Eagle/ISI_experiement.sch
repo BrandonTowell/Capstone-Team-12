@@ -825,81 +825,6 @@ Based on the following sources:
 </deviceset>
 </devicesets>
 </library>
-<library name="Capstone">
-<packages>
-<package name="ECS-8FX">
-<description>SMD Clock Oscillator</description>
-<wire x1="0" y1="0" x2="14" y2="0" width="0.127" layer="20"/>
-<wire x1="14" y1="0" x2="14" y2="-9.8" width="0.127" layer="20"/>
-<wire x1="14" y1="-9.8" x2="0" y2="-9.8" width="0.127" layer="20"/>
-<wire x1="0" y1="-9.8" x2="0" y2="0" width="0.127" layer="20"/>
-<circle x="1.5" y="-4.5" radius="0.5" width="0.127" layer="20"/>
-<smd name="VCC" x="4.5" y="1" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$2" x="4.5" y="0.5" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$3" x="4.5" y="0" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$4" x="4.5" y="-0.5" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$5" x="4.5" y="-1.5" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$6" x="4.5" y="-1" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$7" x="4.5" y="-2" dx="1.27" dy="0.635" layer="1"/>
-<smd name="OUTPUT" x="9.5" y="1" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$9" x="9.5" y="0.5" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$10" x="9.5" y="-0.5" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$11" x="9.5" y="-1" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$12" x="9.5" y="-1.5" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$13" x="9.5" y="0" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$14" x="9.5" y="-2" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$15" x="4.5" y="-8" dx="1.27" dy="0.635" layer="1"/>
-<smd name="TRI-STATE" x="4.5" y="-11" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$17" x="9.5" y="-8" dx="1.27" dy="0.635" layer="1"/>
-<smd name="GND" x="9.5" y="-11" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$19" x="4.5" y="-8.5" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$20" x="4.5" y="-9" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$21" x="4.5" y="-9.5" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$22" x="4.5" y="-10" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$23" x="4.5" y="-10.5" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$24" x="9.5" y="-8.5" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$25" x="9.5" y="-9" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$26" x="9.5" y="-9.5" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$27" x="9.5" y="-10" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$28" x="9.5" y="-10.5" dx="1.27" dy="0.635" layer="1"/>
-</package>
-</packages>
-<symbols>
-<symbol name="ECS-8FX">
-<description>SMD Clock Oscillator</description>
-<wire x1="-33.02" y1="27.94" x2="-33.02" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-33.02" y1="-2.54" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="27.94" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="27.94" x2="-33.02" y2="27.94" width="0.254" layer="94"/>
-<pin name="TRI-STATE" x="-38.1" y="20.32" length="middle"/>
-<pin name="GND" x="-38.1" y="5.08" length="middle"/>
-<pin name="OUTPUT" x="2.54" y="20.32" length="middle" rot="R180"/>
-<pin name="VCC" x="2.54" y="5.08" length="middle" rot="R180"/>
-<text x="-30.48" y="30.48" size="1.778" layer="94">Crystal</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="ECS-8FX">
-<description>SMD Clock Oscillator</description>
-<gates>
-<gate name="G$1" symbol="ECS-8FX" x="17.78" y="-12.7"/>
-</gates>
-<devices>
-<device name="" package="ECS-8FX">
-<connects>
-<connect gate="G$1" pin="GND" pad="GND"/>
-<connect gate="G$1" pin="OUTPUT" pad="OUTPUT"/>
-<connect gate="G$1" pin="TRI-STATE" pad="TRI-STATE"/>
-<connect gate="G$1" pin="VCC" pad="VCC"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="adafruit">
 <packages>
 <package name="USB-MINIB">
@@ -9412,6 +9337,57 @@ SMD tunable RF coil'</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="Capstone">
+<packages>
+<package name="ECS-8FX">
+<description>SMD Clock Oscillator</description>
+<wire x1="0" y1="0" x2="14" y2="0" width="0.127" layer="21"/>
+<wire x1="14" y1="0" x2="14" y2="-9.8" width="0.127" layer="21"/>
+<wire x1="14" y1="-9.8" x2="0" y2="-9.8" width="0.127" layer="21"/>
+<wire x1="0" y1="-9.8" x2="0" y2="0" width="0.127" layer="21"/>
+<circle x="1.5" y="-4.5" radius="0.5" width="0.127" layer="21"/>
+<smd name="1" x="4.5" y="-0.27" dx="1.27" dy="3" layer="1"/>
+<smd name="OUTPUT" x="9.5" y="-0.27" dx="1.27" dy="3" layer="1"/>
+<smd name="TRI-STATE" x="4.5" y="-9.73" dx="1.27" dy="3" layer="1"/>
+<smd name="GND" x="9.5" y="-9.73" dx="1.27" dy="3" layer="1"/>
+</package>
+</packages>
+<symbols>
+<symbol name="ECS-8FX">
+<description>SMD Clock Oscillator</description>
+<wire x1="-33.02" y1="27.94" x2="-33.02" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-33.02" y1="-2.54" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="27.94" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="27.94" x2="-33.02" y2="27.94" width="0.254" layer="94"/>
+<pin name="TRI-STATE" x="-38.1" y="20.32" length="middle"/>
+<pin name="GND" x="-38.1" y="5.08" length="middle"/>
+<pin name="OUTPUT" x="2.54" y="20.32" length="middle" rot="R180"/>
+<pin name="VCC" x="2.54" y="5.08" length="middle" rot="R180"/>
+<text x="-30.48" y="30.48" size="1.778" layer="94">Crystal</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="ECS-8FX">
+<description>SMD Clock Oscillator</description>
+<gates>
+<gate name="G$1" symbol="ECS-8FX" x="17.78" y="-12.7"/>
+</gates>
+<devices>
+<device name="" package="ECS-8FX">
+<connects>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="OUTPUT" pad="OUTPUT"/>
+<connect gate="G$1" pin="TRI-STATE" pad="TRI-STATE"/>
+<connect gate="G$1" pin="VCC" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -9460,7 +9436,6 @@ SMD tunable RF coil'</description>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
 <part name="GND20" library="supply1" deviceset="GND" device=""/>
 <part name="GND21" library="supply1" deviceset="GND" device=""/>
-<part name="U$2" library="Capstone" deviceset="ECS-8FX" device=""/>
 <part name="COUNTER" library="74xx-eu" deviceset="74*191" device="N" technology="HC"/>
 <part name="BUFFER" library="74ac-logic" deviceset="74AC11240" device="D"/>
 <part name="RC1" library="adafruit" deviceset="R-US_" device="R0805" value="1K"/>
@@ -9487,6 +9462,7 @@ SMD tunable RF coil'</description>
 <part name="L2" library="inductor-neosid" deviceset="SMF51-2-" device="51-51"/>
 <part name="U$3" library="E3VB_ISI" deviceset="C-TRIMM" device=""/>
 <part name="GND25" library="supply1" deviceset="GND" device=""/>
+<part name="U$1" library="Capstone" deviceset="ECS-8FX" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9596,7 +9572,6 @@ SMD tunable RF coil'</description>
 <instance part="GND19" gate="1" x="96.52" y="241.3"/>
 <instance part="GND20" gate="1" x="111.76" y="241.3"/>
 <instance part="GND21" gate="1" x="127" y="241.3"/>
-<instance part="U$2" gate="G$1" x="231.14" y="119.38" rot="R90"/>
 <instance part="COUNTER" gate="A" x="266.7" y="101.6"/>
 <instance part="BUFFER" gate="A" x="342.9" y="109.22"/>
 <instance part="RC1" gate="G$1" x="185.42" y="99.06" rot="R90"/>
@@ -9633,6 +9608,7 @@ SMD tunable RF coil'</description>
 <instance part="IC7" gate="E" x="127" y="73.66"/>
 <instance part="U$3" gate="G$1" x="104.14" y="20.32"/>
 <instance part="GND25" gate="1" x="104.14" y="12.7"/>
+<instance part="U$1" gate="G$1" x="231.14" y="119.38" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -9871,9 +9847,9 @@ SMD tunable RF coil'</description>
 <pinref part="GND24" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="GND"/>
 <wire x1="226.06" y1="81.28" x2="226.06" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="GND22" gate="1" pin="GND"/>
+<pinref part="U$1" gate="G$1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="BUFFER" gate="P" pin="GND@4"/>
@@ -10254,11 +10230,11 @@ SMD tunable RF coil'</description>
 </net>
 <net name="N$5" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="TRI-STATE"/>
 <wire x1="210.82" y1="81.28" x2="210.82" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="73.66" x2="185.42" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="RC1" gate="G$1" pin="1"/>
 <wire x1="185.42" y1="73.66" x2="185.42" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="TRI-STATE"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -10271,7 +10247,7 @@ SMD tunable RF coil'</description>
 <wire x1="226.06" y1="129.54" x2="226.06" y2="134.62" width="0.1524" layer="91"/>
 <pinref part="P+1" gate="VCC" pin="VCC"/>
 <junction x="226.06" y="129.54"/>
-<pinref part="U$2" gate="G$1" pin="VCC"/>
+<pinref part="U$1" gate="G$1" pin="VCC"/>
 <junction x="226.06" y="121.92"/>
 </segment>
 <segment>
@@ -10350,12 +10326,12 @@ SMD tunable RF coil'</description>
 </net>
 <net name="CRY_OUT" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="OUTPUT"/>
 <wire x1="210.82" y1="121.92" x2="210.82" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="124.46" x2="238.76" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="238.76" y1="124.46" x2="238.76" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="COUNTER" gate="A" pin="CLK"/>
 <wire x1="238.76" y1="99.06" x2="254" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="OUTPUT"/>
 </segment>
 </net>
 <net name="N$15" class="0">
