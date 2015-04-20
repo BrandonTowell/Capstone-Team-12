@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.1.0">
+<eagle version="7.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -161,12 +161,23 @@
 <smd name="+" x="-3" y="0" dx="3.4" dy="2.3" layer="1"/>
 <smd name="-" x="3" y="0" dx="2.4" dy="2.3" layer="1"/>
 <text x="-2.54" y="2.54" size="1.27" layer="25">&gt;NAME</text>
-<text x="-2.54" y="-3.81" size="1.27" layer="27">&gt;VALUE</text>
+<text x="5.08" y="1.27" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.25" y1="-1.25" x2="0.25" y2="1.25" layer="21"/>
 <rectangle x1="-1.25" y1="-0.25" x2="1.25" y2="0.25" layer="21"/>
 <rectangle x1="-3.5" y1="-0.6" x2="-2.25" y2="0.6" layer="51"/>
 <rectangle x1="2.25" y1="-0.6" x2="3.5" y2="0.6" layer="51"/>
-<dimension x1="-4.064" y1="1.27" x2="4.064" y2="1.27" x3="0" y3="5.08" textsize="1.27" layer="21" unit="inch"/>
+</package>
+<package name="ADJ_IND_NON_STD_PKG">
+<wire x1="-2.95" y1="-2.95" x2="-2.95" y2="2.95" width="0.2032" layer="21"/>
+<wire x1="0.9" y1="-3.1" x2="-0.9" y2="-3.1" width="0.2032" layer="21"/>
+<text x="0" y="0" size="1.27" layer="25">&gt;NAME</text>
+<pad name="P$2" x="-1.8" y="1.75" drill="0.8" shape="long" rot="R90"/>
+<pad name="P$3" x="0" y="1.75" drill="1.1" shape="long" rot="R90"/>
+<pad name="P$4" x="1.8" y="1.75" drill="0.8" shape="long" rot="R90"/>
+<pad name="P$6" x="-1.7" y="-1.75" drill="0.8" shape="long" rot="R270"/>
+<pad name="P$7" x="1.7" y="-1.75" drill="0.8" shape="long" rot="R270"/>
+<wire x1="-2.95" y1="3.6" x2="2.95" y2="3.6" width="0.127" layer="21"/>
+<wire x1="2.95" y1="-2.95" x2="2.95" y2="2.95" width="0.2032" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -197,6 +208,25 @@
 <pin name="P" x="0" y="2.54" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
 <pin name="G" x="0" y="-5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
 </symbol>
+<symbol name="ADJ_INDUCTOR">
+<wire x1="2.54" y1="3.556" x2="2.54" y2="5.08" width="0.254" layer="94" curve="180" cap="flat"/>
+<wire x1="2.54" y1="2.032" x2="2.54" y2="3.556" width="0.254" layer="94" curve="180" cap="flat"/>
+<wire x1="2.54" y1="0.508" x2="2.54" y2="2.032" width="0.254" layer="94" curve="180" cap="flat"/>
+<wire x1="2.54" y1="-1.016" x2="2.54" y2="0.508" width="0.254" layer="94" curve="180" cap="flat"/>
+<wire x1="2.54" y1="-2.54" x2="2.54" y2="-1.016" width="0.254" layer="94" curve="180" cap="flat"/>
+<wire x1="4.064" y1="4.572" x2="4.064" y2="3.81" width="0.1016" layer="94"/>
+<wire x1="4.064" y1="3.048" x2="4.064" y2="2.286" width="0.1016" layer="94"/>
+<wire x1="4.064" y1="1.524" x2="4.064" y2="0.762" width="0.1016" layer="94"/>
+<wire x1="4.064" y1="0" x2="4.064" y2="-0.762" width="0.1016" layer="94"/>
+<wire x1="4.064" y1="-1.524" x2="4.064" y2="-2.286" width="0.1016" layer="94"/>
+<wire x1="1.27" y1="-0.254" x2="5.08" y2="3.556" width="0.1524" layer="94"/>
+<wire x1="4.572" y1="4.064" x2="5.08" y2="3.556" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="3.556" x2="5.588" y2="3.048" width="0.1524" layer="94"/>
+<text x="-2.54" y="10.16" size="1.778" layer="95">&gt;NAME</text>
+<text x="0" y="7.62" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="E1" x="-2.54" y="-2.54" visible="pad" length="middle" direction="pas" swaplevel="1"/>
+<pin name="A1" x="-2.54" y="5.08" visible="pad" length="middle" direction="pas" swaplevel="1"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="JP1">
@@ -225,6 +255,22 @@
 <connects>
 <connect gate="G$1" pin="G" pad="-"/>
 <connect gate="G$1" pin="P" pad="+"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RF_INDUCTOR" prefix="L">
+<gates>
+<gate name="G$1" symbol="ADJ_INDUCTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="ADJ_IND_NON_STD_PKG">
+<connects>
+<connect gate="G$1" pin="A1" pad="P$2"/>
+<connect gate="G$1" pin="E1" pad="P$7"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -5656,26 +5702,24 @@ Thru-hole RA Female Mini-B USB Connector 4UConnector: 18732&lt;/p&gt;
 <packages>
 <package name="JP1">
 <description>&lt;b&gt;JUMPER&lt;/b&gt;</description>
-<wire x1="-1.016" y1="0" x2="-1.27" y2="0.254" width="0.1524" layer="21"/>
-<wire x1="-1.016" y1="0" x2="-1.27" y2="-0.254" width="0.1524" layer="21"/>
-<wire x1="1.016" y1="0" x2="1.27" y2="0.254" width="0.1524" layer="21"/>
-<wire x1="1.016" y1="0" x2="1.27" y2="-0.254" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="-0.254" x2="1.27" y2="-2.286" width="0.1524" layer="21"/>
-<wire x1="1.016" y1="-2.54" x2="1.27" y2="-2.286" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="2.286" x2="1.016" y2="2.54" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="2.286" x2="1.27" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="-1.016" y1="0" x2="-1.65" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="-1.016" y1="0" x2="-1.65" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="0" x2="1.65" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="0" x2="1.65" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="1.65" y1="-0.254" x2="1.65" y2="-2.286" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="-2.54" x2="1.65" y2="-2.286" width="0.1524" layer="21"/>
+<wire x1="1.65" y1="2.286" x2="1.016" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="1.65" y1="2.286" x2="1.65" y2="0.254" width="0.1524" layer="21"/>
 <wire x1="1.016" y1="2.54" x2="-1.016" y2="2.54" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="2.286" x2="-1.016" y2="2.54" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="2.286" x2="-1.27" y2="0.254" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="-0.254" x2="-1.27" y2="-2.286" width="0.1524" layer="21"/>
-<wire x1="-1.016" y1="-2.54" x2="-1.27" y2="-2.286" width="0.1524" layer="21"/>
+<wire x1="-1.65" y1="2.286" x2="-1.016" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="-1.65" y1="2.286" x2="-1.65" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="-1.65" y1="-0.254" x2="-1.65" y2="-2.286" width="0.1524" layer="21"/>
+<wire x1="-1.016" y1="-2.54" x2="-1.65" y2="-2.286" width="0.1524" layer="21"/>
 <wire x1="-1.016" y1="-2.54" x2="1.016" y2="-2.54" width="0.1524" layer="21"/>
 <pad name="1" x="0" y="-1.27" drill="0.9144" shape="long"/>
 <pad name="2" x="0" y="1.27" drill="0.9144" shape="long"/>
 <text x="-1.651" y="-2.54" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
 <text x="2.921" y="-2.54" size="1.27" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
-<rectangle x1="-0.3048" y1="0.9652" x2="0.3048" y2="1.5748" layer="51"/>
-<rectangle x1="-0.3048" y1="-1.5748" x2="0.3048" y2="-0.9652" layer="51"/>
 </package>
 </packages>
 <symbols>
@@ -9186,157 +9230,6 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="inductor-neosid">
-<description>&lt;b&gt;Neosid Chokes and Transformers&lt;/b&gt;&lt;p&gt;
-
-Based on the following sources:
-&lt;ul&gt;
-&lt;li&gt;Electronic Component Book, Part 2 : Chokes, Fixed Value Inductors
-&lt;li&gt;Part 3 : Filters, Coil Assemblies, Thermoplastic Parts
-&lt;li&gt;Part 4 : SMD Filters, Coils, Fixed Value Inductors
-&lt;li&gt;www.neosid.de
-&lt;/ul&gt;
- &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="SMF5_1">
-<description>SMD TUNABLE &lt;B&gt;RF COIL&lt;/B&gt;&lt;p&gt;
-5 x 5 mm</description>
-<wire x1="-2.4" y1="-2.4" x2="-2.4" y2="2.4" width="0.2032" layer="51"/>
-<wire x1="-2.4" y1="2.4" x2="2.4" y2="2.4" width="0.2032" layer="51"/>
-<wire x1="2.4" y1="2.4" x2="2.4" y2="-2.4" width="0.2032" layer="21"/>
-<wire x1="2.4" y1="-2.4" x2="-2.4" y2="-2.4" width="0.2032" layer="51"/>
-<wire x1="-2.4" y1="-2.4" x2="-2.4" y2="-0.85" width="0.2032" layer="21"/>
-<wire x1="-2.4" y1="0.85" x2="-2.4" y2="2.4" width="0.2032" layer="21"/>
-<wire x1="0.9" y1="-2.4" x2="-0.9" y2="-2.4" width="0.2032" layer="21"/>
-<wire x1="-1.15" y1="2.4" x2="-0.6" y2="2.4" width="0.2032" layer="21"/>
-<wire x1="0.6" y1="2.4" x2="1.15" y2="2.4" width="0.2032" layer="21"/>
-<smd name="1" x="-1.75" y="-3.375" dx="0.9" dy="1.75" layer="1"/>
-<smd name="2" x="-1.75" y="3.375" dx="0.9" dy="1.75" layer="1"/>
-<smd name="3" x="0" y="3.375" dx="0.9" dy="1.75" layer="1"/>
-<smd name="4" x="1.75" y="3.375" dx="0.9" dy="1.75" layer="1"/>
-<smd name="5" x="1.75" y="-3.375" dx="0.9" dy="1.75" layer="1"/>
-<smd name="S" x="-3.375" y="0" dx="1.75" dy="0.9" layer="1"/>
-<text x="-2.659" y="0.667" size="1.27" layer="25" rot="R90">&gt;NAME</text>
-<text x="4.036" y="-2.254" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
-<rectangle x1="-0.2" y1="2.5" x2="0.2" y2="3.5" layer="51"/>
-<rectangle x1="-1.95" y1="2.5" x2="-1.55" y2="3.5" layer="51"/>
-<rectangle x1="1.55" y1="2.5" x2="1.95" y2="3.5" layer="51"/>
-<rectangle x1="-1.95" y1="-3.5" x2="-1.55" y2="-2.5" layer="51"/>
-<rectangle x1="1.55" y1="-3.5" x2="1.95" y2="-2.5" layer="51"/>
-<rectangle x1="-3.5" y1="-0.2" x2="-2.5" y2="0.2" layer="51"/>
-</package>
-</packages>
-<symbols>
-<symbol name="SMF51-1">
-<wire x1="0" y1="3.556" x2="0" y2="5.08" width="0.254" layer="94" curve="180" cap="flat"/>
-<wire x1="0" y1="2.032" x2="0" y2="3.556" width="0.254" layer="94" curve="180" cap="flat"/>
-<wire x1="0" y1="0.508" x2="0" y2="2.032" width="0.254" layer="94" curve="180" cap="flat"/>
-<wire x1="0" y1="-1.016" x2="0" y2="0.508" width="0.254" layer="94" curve="180" cap="flat"/>
-<wire x1="0" y1="-2.54" x2="0" y2="-1.016" width="0.254" layer="94" curve="180" cap="flat"/>
-<wire x1="1.524" y1="4.572" x2="1.524" y2="3.81" width="0.1016" layer="94"/>
-<wire x1="1.524" y1="3.048" x2="1.524" y2="2.286" width="0.1016" layer="94"/>
-<wire x1="1.524" y1="1.524" x2="1.524" y2="0.762" width="0.1016" layer="94"/>
-<wire x1="1.524" y1="0" x2="1.524" y2="-0.762" width="0.1016" layer="94"/>
-<wire x1="1.524" y1="-1.524" x2="1.524" y2="-2.286" width="0.1016" layer="94"/>
-<wire x1="-1.27" y1="-0.254" x2="2.54" y2="3.556" width="0.1524" layer="94"/>
-<wire x1="2.032" y1="4.064" x2="2.54" y2="3.556" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="3.556" x2="3.048" y2="3.048" width="0.1524" layer="94"/>
-<text x="-5.08" y="10.16" size="1.778" layer="95">&gt;NAME</text>
-<text x="-5.08" y="7.62" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="E" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" swaplevel="1"/>
-<pin name="A" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" swaplevel="1"/>
-</symbol>
-<symbol name="SHIELD">
-<wire x1="0" y1="0" x2="-0.762" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="0" y2="0.762" width="0.254" layer="94"/>
-<wire x1="0" y1="1.524" x2="0" y2="2.032" width="0.254" layer="94"/>
-<wire x1="0" y1="3.048" x2="0" y2="3.556" width="0.254" layer="94"/>
-<wire x1="-1.524" y1="0" x2="-2.286" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="12.192" x2="-0.762" y2="12.192" width="0.254" layer="94"/>
-<wire x1="-1.524" y1="12.192" x2="-2.286" y2="12.192" width="0.254" layer="94"/>
-<wire x1="0" y1="4.064" x2="0" y2="4.572" width="0.254" layer="94"/>
-<wire x1="0" y1="5.588" x2="0" y2="6.096" width="0.254" layer="94"/>
-<wire x1="0" y1="6.604" x2="0" y2="7.112" width="0.254" layer="94"/>
-<wire x1="0" y1="8.128" x2="0" y2="8.636" width="0.254" layer="94"/>
-<wire x1="0" y1="9.144" x2="0" y2="9.652" width="0.254" layer="94"/>
-<wire x1="0" y1="10.668" x2="0" y2="11.176" width="0.254" layer="94"/>
-<wire x1="0" y1="11.684" x2="0" y2="12.192" width="0.254" layer="94"/>
-<pin name="S" x="0" y="-2.54" visible="off" length="short" direction="pas" rot="R90"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="SMF51-2-" prefix="L">
-<description>&lt;b&gt;RF INDUCTOR&lt;/b&gt;&lt;p&gt;
-SMD tunable RF coil'</description>
-<gates>
-<gate name="G$1" symbol="SMF51-1" x="0" y="0"/>
-<gate name="G$2" symbol="SHIELD" x="5.08" y="-5.08" addlevel="request"/>
-</gates>
-<devices>
-<device name="51-42" package="SMF5_1">
-<connects>
-<connect gate="G$1" pin="A" pad="4"/>
-<connect gate="G$1" pin="E" pad="2"/>
-<connect gate="G$2" pin="S" pad="S"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-<attribute name="OC_FARNELL" value="unknown" constant="no"/>
-<attribute name="OC_NEWARK" value="unknown" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="51-24" package="SMF5_1">
-<connects>
-<connect gate="G$1" pin="A" pad="2"/>
-<connect gate="G$1" pin="E" pad="4"/>
-<connect gate="G$2" pin="S" pad="S"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-<attribute name="OC_FARNELL" value="unknown" constant="no"/>
-<attribute name="OC_NEWARK" value="unknown" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="51-15" package="SMF5_1">
-<connects>
-<connect gate="G$1" pin="A" pad="1"/>
-<connect gate="G$1" pin="E" pad="5"/>
-<connect gate="G$2" pin="S" pad="S"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-<attribute name="OC_FARNELL" value="unknown" constant="no"/>
-<attribute name="OC_NEWARK" value="unknown" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="51-51" package="SMF5_1">
-<connects>
-<connect gate="G$1" pin="A" pad="5"/>
-<connect gate="G$1" pin="E" pad="1"/>
-<connect gate="G$2" pin="S" pad="S"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-<attribute name="OC_FARNELL" value="unknown" constant="no"/>
-<attribute name="OC_NEWARK" value="unknown" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="Capstone">
 <packages>
 <package name="ECS-8FX">
@@ -9422,7 +9315,7 @@ SMD tunable RF coil'</description>
 <part name="JPL" library="jumper" deviceset="JP1E" device=""/>
 <part name="INV" library="jumper" deviceset="JP1E" device=""/>
 <part name="OUTA1" library="E3VB_ISI" deviceset="JP1" device=""/>
-<part name="IC2" library="74xx-eu" deviceset="74*04" device="D" technology="HC"/>
+<part name="VCC" library="74xx-eu" deviceset="74*04" device="D" technology="HC"/>
 <part name="INA1" library="jumper" deviceset="JP1E" device=""/>
 <part name="OUTA2" library="E3VB_ISI" deviceset="JP1" device=""/>
 <part name="INA2" library="jumper" deviceset="JP1E" device=""/>
@@ -9459,7 +9352,7 @@ SMD tunable RF coil'</description>
 <part name="JPL3" library="jumper" deviceset="JP1E" device=""/>
 <part name="L1" library="rcl" deviceset="L-US" device="L1812"/>
 <part name="L3" library="rcl" deviceset="L-US" device="L1812"/>
-<part name="L2" library="inductor-neosid" deviceset="SMF51-2-" device="51-51"/>
+<part name="L2" library="E3VB_ISI" deviceset="RF_INDUCTOR" device=""/>
 <part name="U$3" library="E3VB_ISI" deviceset="C-TRIMM" device=""/>
 <part name="GND25" library="supply1" deviceset="GND" device=""/>
 <part name="U$1" library="Capstone" deviceset="ECS-8FX" device=""/>
@@ -9552,7 +9445,7 @@ SMD tunable RF coil'</description>
 <instance part="INV" gate="A" x="12.7" y="35.56"/>
 <instance part="IC7" gate="P" x="15.24" y="50.8"/>
 <instance part="OUTA1" gate="G$1" x="144.78" y="134.62"/>
-<instance part="IC2" gate="A" x="33.02" y="33.02"/>
+<instance part="VCC" gate="A" x="33.02" y="33.02"/>
 <instance part="INA1" gate="A" x="17.78" y="132.08"/>
 <instance part="OUTA2" gate="G$1" x="144.78" y="114.3"/>
 <instance part="INA2" gate="A" x="17.78" y="111.76"/>
@@ -9560,7 +9453,7 @@ SMD tunable RF coil'</description>
 <instance part="INA3" gate="A" x="17.78" y="91.44"/>
 <instance part="OUTA4" gate="G$1" x="144.78" y="78.74"/>
 <instance part="INA4" gate="A" x="17.78" y="76.2"/>
-<instance part="IC2" gate="P" x="162.56" y="127"/>
+<instance part="VCC" gate="P" x="162.56" y="127"/>
 <instance part="IC6" gate="P" x="111.76" y="170.18"/>
 <instance part="IC5" gate="P" x="93.98" y="220.98"/>
 <instance part="IC1" gate="P" x="88.9" y="254"/>
@@ -9597,11 +9490,11 @@ SMD tunable RF coil'</description>
 <instance part="JPL3" gate="A" x="81.28" y="58.42"/>
 <instance part="L1" gate="G$1" x="91.44" y="48.26" rot="R90"/>
 <instance part="L3" gate="G$1" x="91.44" y="40.64" rot="R90"/>
-<instance part="L2" gate="G$1" x="91.44" y="60.96" rot="R90"/>
-<instance part="IC2" gate="B" x="38.1" y="109.22"/>
-<instance part="IC2" gate="C" x="38.1" y="129.54"/>
-<instance part="IC2" gate="D" x="38.1" y="88.9"/>
-<instance part="IC2" gate="E" x="38.1" y="73.66"/>
+<instance part="L2" gate="G$1" x="91.44" y="58.42" rot="R90"/>
+<instance part="VCC" gate="B" x="38.1" y="109.22"/>
+<instance part="VCC" gate="C" x="38.1" y="129.54"/>
+<instance part="VCC" gate="D" x="38.1" y="88.9"/>
+<instance part="VCC" gate="E" x="38.1" y="73.66"/>
 <instance part="IC7" gate="B" x="127" y="129.54"/>
 <instance part="IC7" gate="C" x="121.92" y="33.02"/>
 <instance part="IC7" gate="D" x="127" y="88.9"/>
@@ -9780,12 +9673,7 @@ SMD tunable RF coil'</description>
 <label x="45.72" y="200.66" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JPC" gate="A" pin="1"/>
-<wire x1="104.14" y1="25.4" x2="104.14" y2="22.86" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="P"/>
-</segment>
-<segment>
-<pinref part="IC2" gate="P" pin="GND"/>
+<pinref part="VCC" gate="P" pin="GND"/>
 <wire x1="162.56" y1="119.38" x2="162.56" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="GND15" gate="1" pin="GND"/>
 </segment>
@@ -9889,8 +9777,8 @@ SMD tunable RF coil'</description>
 <wire x1="83.82" y1="33.02" x2="99.06" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="33.02" x2="104.14" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="JPL" gate="A" pin="2"/>
-<pinref part="L2" gate="G$1" pin="E"/>
-<wire x1="93.98" y1="58.42" x2="99.06" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="L2" gate="G$1" pin="E1"/>
+<wire x1="93.98" y1="55.88" x2="99.06" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="55.88" x2="99.06" y2="48.26" width="0.1524" layer="91"/>
 <junction x="99.06" y="33.02"/>
 <pinref part="L3" gate="G$1" pin="2"/>
@@ -10154,11 +10042,11 @@ SMD tunable RF coil'</description>
 <label x="12.7" y="88.9" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
-<net name="1" class="0">
+<net name="4" class="0">
 <segment>
 <wire x1="48.26" y1="129.54" x2="116.84" y2="129.54" width="0.1524" layer="91"/>
 <pinref part="IC7" gate="B" pin="I"/>
-<pinref part="IC2" gate="C" pin="O"/>
+<pinref part="VCC" gate="C" pin="O"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -10173,7 +10061,7 @@ SMD tunable RF coil'</description>
 <segment>
 <wire x1="48.26" y1="109.22" x2="116.84" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="IC7" gate="A" pin="I"/>
-<pinref part="IC2" gate="B" pin="O"/>
+<pinref part="VCC" gate="B" pin="O"/>
 </segment>
 </net>
 <net name="N$20" class="0">
@@ -10187,7 +10075,7 @@ SMD tunable RF coil'</description>
 <net name="3" class="0">
 <segment>
 <wire x1="48.26" y1="88.9" x2="116.84" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="D" pin="O"/>
+<pinref part="VCC" gate="D" pin="O"/>
 <pinref part="IC7" gate="D" pin="I"/>
 </segment>
 </net>
@@ -10203,13 +10091,13 @@ SMD tunable RF coil'</description>
 <segment>
 <pinref part="INA3" gate="A" pin="2"/>
 <wire x1="20.32" y1="88.9" x2="27.94" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="D" pin="I"/>
+<pinref part="VCC" gate="D" pin="I"/>
 </segment>
 </net>
-<net name="4" class="0">
+<net name="1" class="0">
 <segment>
 <wire x1="48.26" y1="73.66" x2="116.84" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="E" pin="O"/>
+<pinref part="VCC" gate="E" pin="O"/>
 <pinref part="IC7" gate="E" pin="I"/>
 </segment>
 </net>
@@ -10225,7 +10113,7 @@ SMD tunable RF coil'</description>
 <segment>
 <pinref part="INA4" gate="A" pin="2"/>
 <wire x1="20.32" y1="73.66" x2="27.94" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="E" pin="I"/>
+<pinref part="VCC" gate="E" pin="I"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -10309,7 +10197,7 @@ SMD tunable RF coil'</description>
 <label x="111.76" y="185.42" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC2" gate="P" pin="VCC"/>
+<pinref part="VCC" gate="P" pin="VCC"/>
 <wire x1="162.56" y1="134.62" x2="162.56" y2="137.16" width="0.1524" layer="91"/>
 <label x="162.56" y="137.16" size="1.778" layer="95"/>
 </segment>
@@ -10359,7 +10247,7 @@ SMD tunable RF coil'</description>
 <wire x1="281.94" y1="101.6" x2="284.48" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$27" class="0">
+<net name="N$7" class="0">
 <segment>
 <pinref part="COUNTER" gate="A" pin="QD"/>
 <wire x1="279.4" y1="104.14" x2="279.4" y2="93.98" width="0.1524" layer="91"/>
@@ -10516,7 +10404,7 @@ SMD tunable RF coil'</description>
 <label x="12.7" y="195.58" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="V" class="0">
+<net name="V1" class="0">
 <segment>
 <pinref part="JPL" gate="A" pin="1"/>
 <pinref part="JPL3" gate="A" pin="1"/>
@@ -10532,7 +10420,7 @@ SMD tunable RF coil'</description>
 <wire x1="81.28" y1="48.26" x2="76.2" y2="48.26" width="0.1524" layer="91"/>
 <junction x="76.2" y="48.26"/>
 <wire x1="43.18" y1="33.02" x2="76.2" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="A" pin="O"/>
+<pinref part="VCC" gate="A" pin="O"/>
 </segment>
 </net>
 <net name="N$18" class="0">
@@ -10549,30 +10437,37 @@ SMD tunable RF coil'</description>
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="L2" gate="G$1" pin="A"/>
+<pinref part="L2" gate="G$1" pin="A1"/>
 <pinref part="JPL3" gate="A" pin="2"/>
-<wire x1="86.36" y1="58.42" x2="83.82" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="55.88" x2="83.82" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$22" class="0">
 <segment>
 <pinref part="INV" gate="A" pin="2"/>
 <wire x1="15.24" y1="33.02" x2="22.86" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="A" pin="I"/>
+<pinref part="VCC" gate="A" pin="I"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
 <pinref part="INA2" gate="A" pin="2"/>
 <wire x1="20.32" y1="109.22" x2="27.94" y2="109.22" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="B" pin="I"/>
+<pinref part="VCC" gate="B" pin="I"/>
 </segment>
 </net>
 <net name="N$14" class="0">
 <segment>
 <pinref part="INA1" gate="A" pin="2"/>
-<pinref part="IC2" gate="C" pin="I"/>
+<pinref part="VCC" gate="C" pin="I"/>
 <wire x1="20.32" y1="129.54" x2="27.94" y2="129.54" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="P"/>
+<pinref part="JPC" gate="A" pin="1"/>
+<wire x1="104.14" y1="22.86" x2="104.14" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
