@@ -9295,8 +9295,8 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <part name="IC1" library="74ac-logic" deviceset="74AC11374" device="D"/>
 <part name="IC3" library="74ac-logic" deviceset="74AC11374" device="D"/>
 <part name="IC4" library="74ac-logic" deviceset="74AC11374" device="D"/>
-<part name="IC5" library="74xx-us" deviceset="74*266" device="D"/>
-<part name="IC6" library="74xx-us" deviceset="74*266" device="D"/>
+<part name="NXOR1" library="74xx-us" deviceset="74*266" device="D"/>
+<part name="NXOR2" library="74xx-us" deviceset="74*266" device="D"/>
 <part name="USBMINI" library="adafruit" deviceset="USB" device="MINIB"/>
 <part name="CP1" library="adafruit" deviceset="C-US" device="C1206K"/>
 <part name="CP2" library="adafruit" deviceset="C-US" device="C1206K"/>
@@ -9310,12 +9310,12 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
-<part name="IC7" library="74xx-eu" deviceset="74*04" device="D" technology="HC"/>
+<part name="OUT_BUF" library="74xx-eu" deviceset="74*04" device="D" technology="HC"/>
 <part name="JPC" library="jumper" deviceset="JP1E" device=""/>
-<part name="JPL0" library="jumper" deviceset="JP1E" device=""/>
+<part name="JPL" library="jumper" deviceset="JP1E" device=""/>
 <part name="INV" library="jumper" deviceset="JP1E" device=""/>
 <part name="OUTA1" library="E3VB_ISI" deviceset="JP1" device=""/>
-<part name="VCC" library="74xx-eu" deviceset="74*04" device="D" technology="HC"/>
+<part name="IN_BUFF" library="74xx-eu" deviceset="74*04" device="D" technology="HC"/>
 <part name="INA1" library="jumper" deviceset="JP1E" device=""/>
 <part name="OUTA2" library="E3VB_ISI" deviceset="JP1" device=""/>
 <part name="INA2" library="jumper" deviceset="JP1E" device=""/>
@@ -9346,7 +9346,7 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <part name="RC7" library="adafruit" deviceset="R-US_" device="R0805" value="15"/>
 <part name="RC8" library="adafruit" deviceset="R-US_" device="R0805" value="15"/>
 <part name="NP" library="adafruit" deviceset="R-US_" device="R0805" value="15"/>
-<part name="JP7" library="jumper" deviceset="JP1E" device=""/>
+<part name="PW_TP" library="jumper" deviceset="JP1E" device=""/>
 <part name="JPL1" library="jumper" deviceset="JP1E" device=""/>
 <part name="JPL2" library="jumper" deviceset="JP1E" device=""/>
 <part name="JPL3" library="jumper" deviceset="JP1E" device=""/>
@@ -9366,10 +9366,6 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <part name="FEA4" library="E3VB_ISI" deviceset="JP1" device=""/>
 <part name="NE_V" library="E3VB_ISI" deviceset="JP1" device=""/>
 <part name="FE_V" library="E3VB_ISI" deviceset="JP1" device=""/>
-<part name="G" library="E3VB_ISI" deviceset="JP1" device=""/>
-<part name="G1" library="E3VB_ISI" deviceset="JP1" device=""/>
-<part name="G2" library="E3VB_ISI" deviceset="JP1" device=""/>
-<part name="GND6" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9435,11 +9431,11 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <instance part="IC1" gate="A" x="30.48" y="241.3"/>
 <instance part="IC3" gate="A" x="30.48" y="205.74"/>
 <instance part="IC4" gate="A" x="30.48" y="170.18"/>
-<instance part="IC5" gate="A" x="63.5" y="251.46"/>
-<instance part="IC5" gate="B" x="63.5" y="236.22"/>
-<instance part="IC5" gate="C" x="68.58" y="213.36"/>
-<instance part="IC5" gate="D" x="66.04" y="198.12"/>
-<instance part="IC6" gate="A" x="66.04" y="177.8"/>
+<instance part="NXOR1" gate="A" x="63.5" y="251.46"/>
+<instance part="NXOR1" gate="B" x="63.5" y="236.22"/>
+<instance part="NXOR1" gate="C" x="68.58" y="213.36"/>
+<instance part="NXOR1" gate="D" x="66.04" y="198.12"/>
+<instance part="NXOR2" gate="A" x="66.04" y="177.8"/>
 <instance part="USBMINI" gate="G$1" x="172.72" y="190.5"/>
 <instance part="CP1" gate="G$1" x="193.04" y="190.5"/>
 <instance part="CP2" gate="G$1" x="205.74" y="190.5"/>
@@ -9453,13 +9449,13 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <instance part="GND5" gate="1" x="215.9" y="177.8"/>
 <instance part="GND14" gate="1" x="193.04" y="182.88"/>
 <instance part="GND13" gate="1" x="205.74" y="182.88"/>
-<instance part="IC7" gate="A" x="127" y="109.22"/>
+<instance part="OUT_BUF" gate="A" x="127" y="109.22"/>
 <instance part="JPC" gate="A" x="101.6" y="25.4" rot="R90"/>
-<instance part="JPL0" gate="A" x="81.28" y="35.56"/>
+<instance part="JPL" gate="A" x="81.28" y="35.56"/>
 <instance part="INV" gate="A" x="12.7" y="35.56"/>
-<instance part="IC7" gate="P" x="15.24" y="50.8"/>
+<instance part="OUT_BUF" gate="P" x="15.24" y="50.8"/>
 <instance part="OUTA1" gate="G$1" x="144.78" y="134.62"/>
-<instance part="VCC" gate="A" x="33.02" y="33.02"/>
+<instance part="IN_BUFF" gate="A" x="33.02" y="33.02"/>
 <instance part="INA1" gate="A" x="17.78" y="132.08"/>
 <instance part="OUTA2" gate="G$1" x="144.78" y="114.3"/>
 <instance part="INA2" gate="A" x="17.78" y="111.76"/>
@@ -9467,9 +9463,9 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <instance part="INA3" gate="A" x="17.78" y="91.44"/>
 <instance part="OUTA4" gate="G$1" x="144.78" y="78.74"/>
 <instance part="INA4" gate="A" x="17.78" y="76.2"/>
-<instance part="VCC" gate="P" x="162.56" y="127"/>
-<instance part="IC6" gate="P" x="111.76" y="170.18"/>
-<instance part="IC5" gate="P" x="93.98" y="220.98"/>
+<instance part="IN_BUFF" gate="P" x="162.56" y="127"/>
+<instance part="NXOR2" gate="P" x="111.76" y="170.18"/>
+<instance part="NXOR1" gate="P" x="93.98" y="220.98"/>
 <instance part="IC1" gate="P" x="88.9" y="254"/>
 <instance part="IC3" gate="P" x="104.14" y="254"/>
 <instance part="IC4" gate="P" x="119.38" y="254"/>
@@ -9498,21 +9494,21 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <instance part="NP" gate="G$1" x="368.3" y="101.6" rot="R180"/>
 <instance part="BUFFER" gate="P" x="365.76" y="83.82"/>
 <instance part="COUNTER" gate="P" x="350.52" y="83.82"/>
-<instance part="JP7" gate="A" x="213.36" y="180.34" rot="R90"/>
+<instance part="PW_TP" gate="A" x="213.36" y="180.34" rot="R90"/>
 <instance part="JPL1" gate="A" x="81.28" y="43.18"/>
 <instance part="JPL2" gate="A" x="81.28" y="50.8"/>
 <instance part="JPL3" gate="A" x="81.28" y="58.42"/>
 <instance part="L1" gate="G$1" x="91.44" y="48.26" rot="R90"/>
 <instance part="L3" gate="G$1" x="91.44" y="40.64" rot="R90"/>
 <instance part="L2" gate="G$1" x="91.44" y="58.42" rot="R90"/>
-<instance part="VCC" gate="B" x="38.1" y="109.22"/>
-<instance part="VCC" gate="C" x="38.1" y="129.54"/>
-<instance part="VCC" gate="D" x="38.1" y="88.9"/>
-<instance part="VCC" gate="E" x="38.1" y="73.66"/>
-<instance part="IC7" gate="B" x="127" y="129.54"/>
-<instance part="IC7" gate="C" x="121.92" y="33.02"/>
-<instance part="IC7" gate="D" x="127" y="88.9"/>
-<instance part="IC7" gate="E" x="127" y="73.66"/>
+<instance part="IN_BUFF" gate="B" x="38.1" y="109.22"/>
+<instance part="IN_BUFF" gate="C" x="38.1" y="129.54"/>
+<instance part="IN_BUFF" gate="D" x="38.1" y="88.9"/>
+<instance part="IN_BUFF" gate="E" x="38.1" y="73.66"/>
+<instance part="OUT_BUF" gate="B" x="127" y="129.54"/>
+<instance part="OUT_BUF" gate="C" x="121.92" y="33.02"/>
+<instance part="OUT_BUF" gate="D" x="127" y="88.9"/>
+<instance part="OUT_BUF" gate="E" x="127" y="73.66"/>
 <instance part="U$3" gate="G$1" x="104.14" y="20.32"/>
 <instance part="GND25" gate="1" x="104.14" y="12.7"/>
 <instance part="U$1" gate="G$1" x="231.14" y="119.38" rot="R90"/>
@@ -9526,10 +9522,6 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <instance part="FEA4" gate="G$1" x="114.3" y="78.74"/>
 <instance part="NE_V" gate="G$1" x="45.72" y="38.1"/>
 <instance part="FE_V" gate="G$1" x="111.76" y="38.1"/>
-<instance part="G" gate="G$1" x="205.74" y="43.18"/>
-<instance part="G1" gate="G$1" x="223.52" y="43.18"/>
-<instance part="G2" gate="G$1" x="241.3" y="43.18"/>
-<instance part="GND6" gate="1" x="223.52" y="27.94"/>
 </instances>
 <busses>
 </busses>
@@ -9553,7 +9545,7 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <label x="12.7" y="246.38" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC5" gate="A" pin="I0"/>
+<pinref part="NXOR1" gate="A" pin="I0"/>
 <wire x1="48.26" y1="254" x2="50.8" y2="254" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="254" x2="48.26" y2="248.92" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="A" pin="Q2"/>
@@ -9565,7 +9557,7 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <segment>
 <pinref part="IC1" gate="A" pin="Q6"/>
 <wire x1="43.18" y1="238.76" x2="45.72" y2="238.76" width="0.1524" layer="91"/>
-<pinref part="IC5" gate="B" pin="I0"/>
+<pinref part="NXOR1" gate="B" pin="I0"/>
 <wire x1="43.18" y1="238.76" x2="50.8" y2="238.76" width="0.1524" layer="91"/>
 <junction x="43.18" y="238.76"/>
 <label x="45.72" y="238.76" size="1.778" layer="95"/>
@@ -9602,7 +9594,7 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 </net>
 <net name="FB0" class="0">
 <segment>
-<pinref part="IC5" gate="A" pin="O"/>
+<pinref part="NXOR1" gate="A" pin="O"/>
 <wire x1="76.2" y1="251.46" x2="78.74" y2="251.46" width="0.1524" layer="91"/>
 <label x="78.74" y="251.46" size="1.778" layer="95"/>
 </segment>
@@ -9616,7 +9608,7 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <segment>
 <pinref part="IC1" gate="A" pin="Q3"/>
 <wire x1="43.18" y1="246.38" x2="50.8" y2="246.38" width="0.1524" layer="91"/>
-<pinref part="IC5" gate="A" pin="I1"/>
+<pinref part="NXOR1" gate="A" pin="I1"/>
 <wire x1="50.8" y1="246.38" x2="50.8" y2="248.92" width="0.1524" layer="91"/>
 <label x="45.72" y="246.38" size="1.778" layer="95"/>
 </segment>
@@ -9629,7 +9621,7 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <net name="O_LFSR1" class="0">
 <segment>
 <pinref part="IC1" gate="A" pin="Q7"/>
-<pinref part="IC5" gate="B" pin="I1"/>
+<pinref part="NXOR1" gate="B" pin="I1"/>
 <wire x1="43.18" y1="236.22" x2="43.18" y2="233.68" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="233.68" x2="50.8" y2="233.68" width="0.1524" layer="91"/>
 <label x="43.18" y="231.14" size="1.778" layer="95"/>
@@ -9638,7 +9630,7 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <net name="B1" class="0">
 <segment>
 <pinref part="IC4" gate="A" pin="Q1"/>
-<pinref part="IC6" gate="A" pin="I0"/>
+<pinref part="NXOR2" gate="A" pin="I0"/>
 <wire x1="43.18" y1="180.34" x2="53.34" y2="180.34" width="0.1524" layer="91"/>
 <label x="43.18" y="180.34" size="1.778" layer="95"/>
 </segment>
@@ -9653,7 +9645,7 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <pinref part="IC4" gate="A" pin="Q2"/>
 <wire x1="43.18" y1="177.8" x2="50.8" y2="177.8" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="177.8" x2="50.8" y2="175.26" width="0.1524" layer="91"/>
-<pinref part="IC6" gate="A" pin="I1"/>
+<pinref part="NXOR2" gate="A" pin="I1"/>
 <wire x1="50.8" y1="175.26" x2="53.34" y2="175.26" width="0.1524" layer="91"/>
 <label x="48.26" y="177.8" size="1.778" layer="95"/>
 </segment>
@@ -9686,7 +9678,7 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <pinref part="GND13" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="IC7" gate="P" pin="GND"/>
+<pinref part="OUT_BUF" gate="P" pin="GND"/>
 <wire x1="15.24" y1="43.18" x2="17.78" y2="43.18" width="0.1524" layer="91"/>
 <label x="17.78" y="40.64" size="1.778" layer="95"/>
 </segment>
@@ -9701,17 +9693,17 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <label x="45.72" y="200.66" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="VCC" gate="P" pin="GND"/>
+<pinref part="IN_BUFF" gate="P" pin="GND"/>
 <wire x1="162.56" y1="119.38" x2="162.56" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="GND15" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="IC6" gate="P" pin="GND"/>
+<pinref part="NXOR2" gate="P" pin="GND"/>
 <pinref part="GND17" gate="1" pin="GND"/>
 <wire x1="111.76" y1="157.48" x2="111.76" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="IC5" gate="P" pin="GND"/>
+<pinref part="NXOR1" gate="P" pin="GND"/>
 <pinref part="GND18" gate="1" pin="GND"/>
 <wire x1="93.98" y1="208.28" x2="93.98" y2="210.82" width="0.1524" layer="91"/>
 </segment>
@@ -9792,32 +9784,19 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <label x="12.7" y="157.48" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP7" gate="A" pin="1"/>
+<pinref part="PW_TP" gate="A" pin="1"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="G"/>
 <pinref part="GND25" gate="1" pin="GND"/>
 </segment>
-<segment>
-<pinref part="G" gate="G$1" pin="1"/>
-<wire x1="205.74" y1="40.64" x2="205.74" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="205.74" y1="35.56" x2="223.52" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="G2" gate="G$1" pin="1"/>
-<wire x1="223.52" y1="35.56" x2="241.3" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="241.3" y1="35.56" x2="241.3" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="G1" gate="G$1" pin="1"/>
-<wire x1="223.52" y1="40.64" x2="223.52" y2="35.56" width="0.1524" layer="91"/>
-<junction x="223.52" y="35.56"/>
-<pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="223.52" y1="35.56" x2="223.52" y2="30.48" width="0.1524" layer="91"/>
-</segment>
 </net>
 <net name="N$4" class="0">
 <segment>
 <wire x1="83.82" y1="33.02" x2="99.06" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="33.02" x2="104.14" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="JPL0" gate="A" pin="2"/>
+<pinref part="JPL" gate="A" pin="2"/>
 <pinref part="L2" gate="G$1" pin="E1"/>
 <wire x1="93.98" y1="55.88" x2="99.06" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="55.88" x2="99.06" y2="48.26" width="0.1524" layer="91"/>
@@ -9829,7 +9808,7 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <pinref part="L1" gate="G$1" pin="2"/>
 <junction x="99.06" y="48.26"/>
 <junction x="99.06" y="55.88"/>
-<pinref part="IC7" gate="C" pin="I"/>
+<pinref part="OUT_BUF" gate="C" pin="I"/>
 <wire x1="111.76" y1="33.02" x2="104.14" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="JPC" gate="A" pin="2"/>
 <wire x1="104.14" y1="33.02" x2="104.14" y2="27.94" width="0.1524" layer="91"/>
@@ -9843,13 +9822,13 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <segment>
 <pinref part="OUTV" gate="G$1" pin="1"/>
 <wire x1="139.7" y1="38.1" x2="139.7" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="IC7" gate="C" pin="O"/>
+<pinref part="OUT_BUF" gate="C" pin="O"/>
 <wire x1="132.08" y1="33.02" x2="139.7" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="FB1" class="0">
 <segment>
-<pinref part="IC5" gate="B" pin="O"/>
+<pinref part="NXOR1" gate="B" pin="O"/>
 <wire x1="76.2" y1="236.22" x2="78.74" y2="236.22" width="0.1524" layer="91"/>
 <label x="78.74" y="236.22" size="1.778" layer="95"/>
 </segment>
@@ -9921,7 +9900,7 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <segment>
 <pinref part="IC3" gate="A" pin="Q2"/>
 <wire x1="50.8" y1="213.36" x2="50.8" y2="215.9" width="0.1524" layer="91"/>
-<pinref part="IC5" gate="C" pin="I0"/>
+<pinref part="NXOR1" gate="C" pin="I0"/>
 <wire x1="50.8" y1="215.9" x2="55.88" y2="215.9" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="213.36" x2="43.18" y2="213.36" width="0.1524" layer="91"/>
 <label x="45.72" y="213.36" size="1.778" layer="95"/>
@@ -9932,7 +9911,7 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <pinref part="IC3" gate="A" pin="Q5"/>
 <wire x1="43.18" y1="205.74" x2="50.8" y2="205.74" width="0.1524" layer="91"/>
 <label x="45.72" y="205.74" size="1.778" layer="95"/>
-<pinref part="IC5" gate="D" pin="I0"/>
+<pinref part="NXOR1" gate="D" pin="I0"/>
 <wire x1="50.8" y1="200.66" x2="53.34" y2="200.66" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="205.74" x2="50.8" y2="200.66" width="0.1524" layer="91"/>
 </segment>
@@ -9949,7 +9928,7 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <label x="12.7" y="218.44" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC5" gate="C" pin="O"/>
+<pinref part="NXOR1" gate="C" pin="O"/>
 <wire x1="81.28" y1="213.36" x2="86.36" y2="213.36" width="0.1524" layer="91"/>
 <label x="81.28" y="213.36" size="1.778" layer="95"/>
 </segment>
@@ -9961,7 +9940,7 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 </net>
 <net name="FB3" class="0">
 <segment>
-<pinref part="IC5" gate="D" pin="O"/>
+<pinref part="NXOR1" gate="D" pin="O"/>
 <wire x1="78.74" y1="198.12" x2="83.82" y2="198.12" width="0.1524" layer="91"/>
 <label x="81.28" y="198.12" size="1.778" layer="95"/>
 </segment>
@@ -9978,7 +9957,7 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 </net>
 <net name="FB4" class="0">
 <segment>
-<pinref part="IC6" gate="A" pin="O"/>
+<pinref part="NXOR2" gate="A" pin="O"/>
 <wire x1="78.74" y1="177.8" x2="83.82" y2="177.8" width="0.1524" layer="91"/>
 <label x="81.28" y="177.8" size="1.778" layer="95"/>
 </segment>
@@ -9990,7 +9969,7 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 </net>
 <net name="O_LFSR2" class="0">
 <segment>
-<pinref part="IC5" gate="C" pin="I1"/>
+<pinref part="NXOR1" gate="C" pin="I1"/>
 <pinref part="IC3" gate="A" pin="Q3"/>
 <wire x1="55.88" y1="210.82" x2="43.18" y2="210.82" width="0.1524" layer="91"/>
 <label x="50.8" y="208.28" size="1.778" layer="95"/>
@@ -10054,7 +10033,7 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <segment>
 <pinref part="IC3" gate="A" pin="Q6"/>
 <wire x1="43.18" y1="203.2" x2="48.26" y2="203.2" width="0.1524" layer="91"/>
-<pinref part="IC5" gate="D" pin="I1"/>
+<pinref part="NXOR1" gate="D" pin="I1"/>
 <wire x1="48.26" y1="203.2" x2="48.26" y2="195.58" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="195.58" x2="53.34" y2="195.58" width="0.1524" layer="91"/>
 <label x="48.26" y="193.04" size="1.778" layer="95"/>
@@ -10089,38 +10068,38 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <net name="4" class="0">
 <segment>
 <wire x1="48.26" y1="129.54" x2="60.96" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="IC7" gate="B" pin="I"/>
-<pinref part="VCC" gate="C" pin="O"/>
+<pinref part="OUT_BUF" gate="B" pin="I"/>
+<pinref part="IN_BUFF" gate="C" pin="O"/>
 <pinref part="NEA1" gate="G$1" pin="1"/>
 <wire x1="60.96" y1="129.54" x2="109.22" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="129.54" x2="116.84" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="134.62" x2="60.96" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="129.54" x2="60.96" y2="134.62" width="0.1524" layer="91"/>
 <junction x="60.96" y="129.54"/>
 <pinref part="FEA1" gate="G$1" pin="1"/>
 <wire x1="109.22" y1="134.62" x2="109.22" y2="129.54" width="0.1524" layer="91"/>
 <junction x="109.22" y="129.54"/>
 </segment>
 </net>
-<net name="N$13" class="0">
+<net name="N$9" class="0">
 <segment>
 <pinref part="OUTA1" gate="G$1" pin="1"/>
 <wire x1="144.78" y1="132.08" x2="144.78" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="IC7" gate="B" pin="O"/>
+<pinref part="OUT_BUF" gate="B" pin="O"/>
 <wire x1="137.16" y1="129.54" x2="144.78" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="2" class="0">
 <segment>
 <wire x1="48.26" y1="109.22" x2="55.88" y2="109.22" width="0.1524" layer="91"/>
-<pinref part="IC7" gate="A" pin="I"/>
-<pinref part="VCC" gate="B" pin="O"/>
+<pinref part="OUT_BUF" gate="A" pin="I"/>
+<pinref part="IN_BUFF" gate="B" pin="O"/>
 <pinref part="NEA2" gate="G$1" pin="1"/>
 <wire x1="55.88" y1="109.22" x2="111.76" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="109.22" x2="116.84" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="111.76" x2="55.88" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="109.22" x2="55.88" y2="111.76" width="0.1524" layer="91"/>
 <junction x="55.88" y="109.22"/>
 <pinref part="FEA2" gate="G$1" pin="1"/>
-<wire x1="111.76" y1="111.76" x2="111.76" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="109.22" x2="111.76" y2="111.76" width="0.1524" layer="91"/>
 <junction x="111.76" y="109.22"/>
 </segment>
 </net>
@@ -10128,15 +10107,15 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <segment>
 <pinref part="OUTA2" gate="G$1" pin="1"/>
 <wire x1="144.78" y1="111.76" x2="144.78" y2="109.22" width="0.1524" layer="91"/>
-<pinref part="IC7" gate="A" pin="O"/>
+<pinref part="OUT_BUF" gate="A" pin="O"/>
 <wire x1="137.16" y1="109.22" x2="144.78" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="3" class="0">
 <segment>
 <wire x1="48.26" y1="88.9" x2="55.88" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="VCC" gate="D" pin="O"/>
-<pinref part="IC7" gate="D" pin="I"/>
+<pinref part="IN_BUFF" gate="D" pin="O"/>
+<pinref part="OUT_BUF" gate="D" pin="I"/>
 <pinref part="NEA3" gate="G$1" pin="1"/>
 <wire x1="55.88" y1="88.9" x2="111.76" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="88.9" x2="116.84" y2="88.9" width="0.1524" layer="91"/>
@@ -10152,21 +10131,21 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <pinref part="OUTA3" gate="G$1" pin="1"/>
 <wire x1="144.78" y1="91.44" x2="144.78" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="88.9" x2="137.16" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="IC7" gate="D" pin="O"/>
+<pinref part="OUT_BUF" gate="D" pin="O"/>
 </segment>
 </net>
 <net name="N$25" class="0">
 <segment>
 <pinref part="INA3" gate="A" pin="2"/>
 <wire x1="20.32" y1="88.9" x2="27.94" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="VCC" gate="D" pin="I"/>
+<pinref part="IN_BUFF" gate="D" pin="I"/>
 </segment>
 </net>
 <net name="1" class="0">
 <segment>
 <wire x1="48.26" y1="73.66" x2="53.34" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="VCC" gate="E" pin="O"/>
-<pinref part="IC7" gate="E" pin="I"/>
+<pinref part="IN_BUFF" gate="E" pin="O"/>
+<pinref part="OUT_BUF" gate="E" pin="I"/>
 <pinref part="NEA4" gate="G$1" pin="1"/>
 <wire x1="53.34" y1="73.66" x2="114.3" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="73.66" x2="116.84" y2="73.66" width="0.1524" layer="91"/>
@@ -10182,14 +10161,14 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <pinref part="OUTA4" gate="G$1" pin="1"/>
 <wire x1="144.78" y1="76.2" x2="144.78" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="73.66" x2="137.16" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="IC7" gate="E" pin="O"/>
+<pinref part="OUT_BUF" gate="E" pin="O"/>
 </segment>
 </net>
 <net name="N$21" class="0">
 <segment>
 <pinref part="INA4" gate="A" pin="2"/>
 <wire x1="20.32" y1="73.66" x2="27.94" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="VCC" gate="E" pin="I"/>
+<pinref part="IN_BUFF" gate="E" pin="I"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -10245,7 +10224,7 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <junction x="205.74" y="195.58"/>
 <junction x="193.04" y="195.58"/>
 <label x="185.42" y="198.12" size="1.778" layer="95"/>
-<pinref part="JP7" gate="A" pin="2"/>
+<pinref part="PW_TP" gate="A" pin="2"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="P" pin="VCC@2"/>
@@ -10263,22 +10242,22 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <label x="121.92" y="264.16" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC5" gate="P" pin="VCC"/>
+<pinref part="NXOR1" gate="P" pin="VCC"/>
 <wire x1="93.98" y1="231.14" x2="93.98" y2="233.68" width="0.1524" layer="91"/>
 <label x="93.98" y="233.68" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC6" gate="P" pin="VCC"/>
+<pinref part="NXOR2" gate="P" pin="VCC"/>
 <wire x1="111.76" y1="180.34" x2="111.76" y2="185.42" width="0.1524" layer="91"/>
 <label x="111.76" y="185.42" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="VCC" gate="P" pin="VCC"/>
+<pinref part="IN_BUFF" gate="P" pin="VCC"/>
 <wire x1="162.56" y1="134.62" x2="162.56" y2="137.16" width="0.1524" layer="91"/>
 <label x="162.56" y="137.16" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC7" gate="P" pin="VCC"/>
+<pinref part="OUT_BUF" gate="P" pin="VCC"/>
 <wire x1="15.24" y1="58.42" x2="17.78" y2="58.42" width="0.1524" layer="91"/>
 <label x="20.32" y="55.88" size="1.778" layer="95"/>
 </segment>
@@ -10482,7 +10461,7 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 </net>
 <net name="V1" class="0">
 <segment>
-<pinref part="JPL0" gate="A" pin="1"/>
+<pinref part="JPL" gate="A" pin="1"/>
 <pinref part="JPL3" gate="A" pin="1"/>
 <wire x1="76.2" y1="33.02" x2="81.28" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="55.88" x2="76.2" y2="55.88" width="0.1524" layer="91"/>
@@ -10496,12 +10475,11 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <wire x1="81.28" y1="48.26" x2="76.2" y2="48.26" width="0.1524" layer="91"/>
 <junction x="76.2" y="48.26"/>
 <wire x1="43.18" y1="33.02" x2="45.72" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="VCC" gate="A" pin="O"/>
+<pinref part="IN_BUFF" gate="A" pin="O"/>
 <pinref part="NE_V" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="33.02" x2="76.2" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="35.56" x2="45.72" y2="33.02" width="0.1524" layer="91"/>
 <junction x="45.72" y="33.02"/>
-<junction x="76.2" y="33.02"/>
 </segment>
 </net>
 <net name="N$18" class="0">
@@ -10527,20 +10505,20 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <segment>
 <pinref part="INV" gate="A" pin="2"/>
 <wire x1="15.24" y1="33.02" x2="22.86" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="VCC" gate="A" pin="I"/>
+<pinref part="IN_BUFF" gate="A" pin="I"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
 <pinref part="INA2" gate="A" pin="2"/>
 <wire x1="20.32" y1="109.22" x2="27.94" y2="109.22" width="0.1524" layer="91"/>
-<pinref part="VCC" gate="B" pin="I"/>
+<pinref part="IN_BUFF" gate="B" pin="I"/>
 </segment>
 </net>
 <net name="N$14" class="0">
 <segment>
 <pinref part="INA1" gate="A" pin="2"/>
-<pinref part="VCC" gate="C" pin="I"/>
+<pinref part="IN_BUFF" gate="C" pin="I"/>
 <wire x1="20.32" y1="129.54" x2="27.94" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
