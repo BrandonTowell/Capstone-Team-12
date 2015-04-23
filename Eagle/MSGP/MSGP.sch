@@ -6450,8 +6450,6 @@ type 0309, grid 2.5 mm</description>
 <part name="R10" library="resistor" deviceset="R-US_" device="0204/2V"/>
 <part name="R11" library="resistor" deviceset="R-US_" device="0204/2V"/>
 <part name="GND24" library="supply1" deviceset="GND" device=""/>
-<part name="JP3" library="jumper" deviceset="JP1E" device=""/>
-<part name="GND25" library="supply1" deviceset="GND" device=""/>
 <part name="JP7" library="jumper" deviceset="JP1E" device=""/>
 <part name="GND26" library="supply1" deviceset="GND" device=""/>
 </parts>
@@ -6522,8 +6520,6 @@ type 0309, grid 2.5 mm</description>
 <instance part="R10" gate="G$1" x="-12.7" y="0" rot="R90"/>
 <instance part="R11" gate="G$1" x="-50.8" y="2.54" rot="R180"/>
 <instance part="GND24" gate="1" x="-45.72" y="7.62" rot="R270"/>
-<instance part="JP3" gate="A" x="-66.04" y="5.08"/>
-<instance part="GND25" gate="1" x="-66.04" y="0"/>
 <instance part="JP7" gate="A" x="-2.54" y="7.62"/>
 <instance part="GND26" gate="1" x="0" y="2.54"/>
 </instances>
@@ -6727,10 +6723,7 @@ type 0309, grid 2.5 mm</description>
 <pinref part="IC2" gate="B" pin="+IN"/>
 <pinref part="GND24" gate="1" pin="GND"/>
 <wire x1="-38.1" y1="7.62" x2="-43.18" y2="7.62" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="JP3" gate="A" pin="1"/>
-<pinref part="GND25" gate="1" pin="GND"/>
+<junction x="-43.18" y="7.62"/>
 </segment>
 <segment>
 <pinref part="JP7" gate="A" pin="2"/>
@@ -6742,11 +6735,20 @@ type 0309, grid 2.5 mm</description>
 <wire x1="-50.8" y1="22.86" x2="-50.8" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="-50.8" y1="40.64" x2="-35.56" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="JP2" gate="A" pin="2"/>
-<wire x1="-50.8" y1="22.86" x2="-58.42" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="22.86" x2="-55.88" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="1"/>
 <junction x="-50.8" y="22.86"/>
 <pinref part="R5" gate="G$1" pin="1"/>
 <junction x="-35.56" y="40.64"/>
+<pinref part="R11" gate="G$1" pin="2"/>
+<wire x1="-55.88" y1="22.86" x2="-58.42" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-55.88" y1="2.54" x2="-55.88" y2="-5.08" width="0.1524" layer="91"/>
+<pinref part="R10" gate="G$1" pin="1"/>
+<wire x1="-55.88" y1="-5.08" x2="-12.7" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="-55.88" y1="22.86" x2="-55.88" y2="2.54" width="0.1524" layer="91"/>
+<junction x="-55.88" y="2.54"/>
+<junction x="-55.88" y="22.86"/>
+<junction x="-12.7" y="-5.08"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -6825,6 +6827,8 @@ type 0309, grid 2.5 mm</description>
 <wire x1="-22.86" y1="5.08" x2="-12.7" y2="5.08" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="5.08" x2="-2.54" y2="5.08" width="0.1524" layer="91"/>
 <pinref part="JP7" gate="A" pin="1"/>
+<junction x="-12.7" y="5.08"/>
+<junction x="-2.54" y="5.08"/>
 </segment>
 </net>
 <net name="N$13" class="0">
@@ -6832,16 +6836,7 @@ type 0309, grid 2.5 mm</description>
 <pinref part="IC2" gate="B" pin="-IN"/>
 <pinref part="R11" gate="G$1" pin="1"/>
 <wire x1="-38.1" y1="2.54" x2="-45.72" y2="2.54" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$14" class="0">
-<segment>
-<pinref part="R11" gate="G$1" pin="2"/>
-<wire x1="-55.88" y1="2.54" x2="-55.88" y2="-5.08" width="0.1524" layer="91"/>
-<pinref part="R10" gate="G$1" pin="1"/>
-<wire x1="-55.88" y1="-5.08" x2="-12.7" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="-55.88" y1="2.54" x2="-63.5" y2="2.54" width="0.1524" layer="91"/>
-<pinref part="JP3" gate="A" pin="2"/>
+<junction x="-45.72" y="2.54"/>
 </segment>
 </net>
 </nets>
