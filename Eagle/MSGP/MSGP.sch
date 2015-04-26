@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.1.0">
+<eagle version="7.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -6428,7 +6428,7 @@ type 0309, grid 2.5 mm</description>
 <part name="JP4" library="jumper" deviceset="JP1E" device=""/>
 <part name="JP5" library="jumper" deviceset="JP1E" device=""/>
 <part name="JP6" library="jumper" deviceset="JP1E" device=""/>
-<part name="GND13" library="supply1" deviceset="GND" device=""/>
+<part name="GND_D" library="supply1" deviceset="GND" device=""/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
@@ -6497,7 +6497,7 @@ type 0309, grid 2.5 mm</description>
 <instance part="JP4" gate="A" x="-45.72" y="81.28" rot="R270"/>
 <instance part="JP5" gate="A" x="-38.1" y="-20.32"/>
 <instance part="JP6" gate="A" x="-15.24" y="-17.78"/>
-<instance part="GND13" gate="1" x="-43.18" y="-25.4"/>
+<instance part="GND_D" gate="1" x="-43.18" y="-25.4"/>
 <instance part="GND14" gate="1" x="-30.48" y="-25.4"/>
 <instance part="GND15" gate="1" x="-17.78" y="-25.4"/>
 <instance part="GND16" gate="1" x="-10.16" y="-25.4"/>
@@ -6671,7 +6671,7 @@ type 0309, grid 2.5 mm</description>
 </segment>
 <segment>
 <pinref part="JP5" gate="A" pin="1"/>
-<pinref part="GND13" gate="1" pin="GND"/>
+<pinref part="GND_D" gate="1" pin="GND"/>
 <wire x1="-38.1" y1="-22.86" x2="-43.18" y2="-22.86" width="0.1524" layer="91"/>
 </segment>
 <segment>
