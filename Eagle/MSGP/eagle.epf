@@ -347,6 +347,7 @@ UsedLibrary="/Applications/EAGLE-7.2.0/lbr/zetex.lbr"
 UsedLibrary="/Applications/EAGLE-7.2.0/lbr/zilog.lbr"
 UsedLibrary="/Users/luis/Documents/PSU/ECE/ECE412/Capstone-Team-12/Part_Lib/E3VB_ISI.lbr"
 UsedLibrary="/Applications/EAGLE-7.2.0/lbr/element14/LTC_By_element14_Batch_1.lbr"
+UsedLibrary="/Users/luis/Documents/practicum/eagle/T06_LockBox.lbr"
 
 [Win_1]
 Type="Control Panel"
