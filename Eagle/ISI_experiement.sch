@@ -9463,8 +9463,8 @@ at 30/07/2012 17:04:24</description>
 <part name="JPL1" library="jumper" deviceset="JP1E" device=""/>
 <part name="JPL2" library="jumper" deviceset="JP1E" device=""/>
 <part name="JPL3" library="jumper" deviceset="JP1E" device=""/>
-<part name="L1" library="Bourns_By_element14_Batch_1" deviceset="PM0805-8N2M-RC" device="" value=".5 nH"/>
-<part name="L3" library="Bourns_By_element14_Batch_1" deviceset="PM0805-8N2M-RC" device="" value="1nH"/>
+<part name="L1" library="Bourns_By_element14_Batch_1" deviceset="PM0805-8N2M-RC" device="" value=".5 uH"/>
+<part name="L3" library="Bourns_By_element14_Batch_1" deviceset="PM0805-8N2M-RC" device="" value="1uH"/>
 <part name="L2" library="E3VB_ISI" deviceset="RF_INDUCTOR" device=""/>
 <part name="U$3" library="E3VB_ISI" deviceset="C-TRIMM" device=""/>
 <part name="GND25" library="supply1" deviceset="GND" device=""/>

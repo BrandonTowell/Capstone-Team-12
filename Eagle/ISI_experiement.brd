@@ -1004,7 +1004,7 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="NAME" x="34.29" y="20.1422" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="28.956" y="17.399" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="L1" library="Bourns_By_element14_Batch_1" package="INDC2115X15N" value=".5 nH" x="36.576" y="16.0528" smashed="yes">
+<element name="L1" library="Bourns_By_element14_Batch_1" package="INDC2115X15N" value=".5 uH" x="36.576" y="16.0528" smashed="yes">
 <attribute name="OC_NEWARK" value="63K3027" x="36.576" y="16.0528" size="1.778" layer="27" display="off"/>
 <attribute name="TOLERANCE" value="±20 %" x="36.576" y="16.0528" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="PM0805-8N2M-RC" x="36.576" y="16.0528" size="1.778" layer="27" display="off"/>
@@ -1014,7 +1014,7 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="NAME" x="38.354" y="15.7734" size="2.0828" layer="25" ratio="10" rot="SR0"/>
 <attribute name="VALUE" x="36.1442" y="13.0556" size="2.0828" layer="27" ratio="10" rot="SR0"/>
 </element>
-<element name="L3" library="Bourns_By_element14_Batch_1" package="INDC2115X15N" value="1nH" x="36.6776" y="9.8044" smashed="yes">
+<element name="L3" library="Bourns_By_element14_Batch_1" package="INDC2115X15N" value="1uH" x="36.6776" y="9.8044" smashed="yes">
 <attribute name="OC_NEWARK" value="63K3027" x="36.6776" y="9.8044" size="1.778" layer="27" display="off"/>
 <attribute name="TOLERANCE" value="±20 %" x="36.6776" y="9.8044" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="PM0805-8N2M-RC" x="36.6776" y="9.8044" size="1.778" layer="27" display="off"/>
