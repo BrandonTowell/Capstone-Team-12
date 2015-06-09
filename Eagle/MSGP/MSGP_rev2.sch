@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.1.0">
+<eagle version="7.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -6409,7 +6409,6 @@ type 0309, grid 2.5 mm</description>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="JP1" library="jumper" deviceset="JP1E" device=""/>
 <part name="JP2" library="jumper" deviceset="JP1E" device=""/>
-<part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="FRAME1" library="frames" deviceset="A4L-LOC" device=""/>
 <part name="USBMINI" library="adafruit" deviceset="USB" device="MINIB"/>
@@ -6418,20 +6417,14 @@ type 0309, grid 2.5 mm</description>
 <part name="C3" library="adafruit" deviceset="C-US" device="C1206K" value="100uF"/>
 <part name="C4" library="adafruit" deviceset="C-US" device="C1206K" value="100uF"/>
 <part name="C5" library="adafruit" deviceset="C-US" device="C1206K" value="0.1uF"/>
-<part name="GND8" library="supply1" deviceset="GND" device=""/>
-<part name="GND9" library="supply1" deviceset="GND" device=""/>
-<part name="GND10" library="supply1" deviceset="GND" device=""/>
-<part name="GND11" library="supply1" deviceset="GND" device=""/>
-<part name="GND12" library="supply1" deviceset="GND" device=""/>
-<part name="GND20" library="supply1" deviceset="GND" device=""/>
-<part name="GND21" library="supply1" deviceset="GND" device=""/>
+<part name="GNDA" library="supply1" deviceset="GND" device=""/>
 <part name="JP4" library="jumper" deviceset="JP1E" device=""/>
 <part name="JP5" library="jumper" deviceset="JP1E" device=""/>
 <part name="JP6" library="jumper" deviceset="JP1E" device=""/>
 <part name="GND_D" library="supply1" deviceset="GND" device=""/>
-<part name="GND14" library="supply1" deviceset="GND" device=""/>
-<part name="GND15" library="supply1" deviceset="GND" device=""/>
-<part name="GND16" library="supply1" deviceset="GND" device=""/>
+<part name="GNDA1" library="supply1" deviceset="GND" device=""/>
+<part name="GND_D2" library="supply1" deviceset="GND" device=""/>
+<part name="GNDA3" library="supply1" deviceset="GND" device=""/>
 <part name="R6" library="resistor" deviceset="R-US_" device="0204/2V"/>
 <part name="R1" library="resistor" deviceset="R-US_" device="0204/2V"/>
 <part name="R2" library="resistor" deviceset="R-US_" device="0204/2V"/>
@@ -6439,14 +6432,8 @@ type 0309, grid 2.5 mm</description>
 <part name="R7" library="resistor" deviceset="R-US_" device="0204/2V"/>
 <part name="R8" library="resistor" deviceset="R-US_" device="0204/2V"/>
 <part name="R9" library="resistor" deviceset="R-US_" device="0204/2V"/>
-<part name="GND17" library="supply1" deviceset="GND" device=""/>
-<part name="GND18" library="supply1" deviceset="GND" device=""/>
-<part name="GND19" library="supply1" deviceset="GND" device=""/>
-<part name="GND22" library="supply1" deviceset="GND" device=""/>
-<part name="GND23" library="supply1" deviceset="GND" device=""/>
 <part name="GND24" library="supply1" deviceset="GND" device=""/>
 <part name="JP7" library="jumper" deviceset="JP1E" device=""/>
-<part name="GND26" library="supply1" deviceset="GND" device=""/>
 <part name="JP3" library="jumper" deviceset="JP1E" device=""/>
 <part name="JP8" library="jumper" deviceset="JP1E" device=""/>
 <part name="JP9" library="jumper" deviceset="JP1E" device=""/>
@@ -6458,12 +6445,6 @@ type 0309, grid 2.5 mm</description>
 <part name="R11" library="resistor" deviceset="R-US_" device="0204/2V"/>
 <part name="R12" library="resistor" deviceset="R-US_" device="0204/2V"/>
 <part name="R13" library="resistor" deviceset="R-US_" device="0204/2V"/>
-<part name="GND13" library="supply1" deviceset="GND" device=""/>
-<part name="GND25" library="supply1" deviceset="GND" device=""/>
-<part name="GND27" library="supply1" deviceset="GND" device=""/>
-<part name="GND28" library="supply1" deviceset="GND" device=""/>
-<part name="GND29" library="supply1" deviceset="GND" device=""/>
-<part name="GND30" library="supply1" deviceset="GND" device=""/>
 <part name="P+4" library="supply1" deviceset="VCC" device=""/>
 <part name="GND31" library="supply1" deviceset="GND" device=""/>
 <part name="IC4" library="74xx-us" deviceset="74*04" device="D" technology="ALS"/>
@@ -6473,21 +6454,36 @@ type 0309, grid 2.5 mm</description>
 <part name="R17" library="resistor" deviceset="R-US_" device="0204/2V"/>
 <part name="R18" library="resistor" deviceset="R-US_" device="0204/2V"/>
 <part name="R19" library="resistor" deviceset="R-US_" device="0204/2V"/>
-<part name="GND32" library="supply1" deviceset="GND" device=""/>
-<part name="GND33" library="supply1" deviceset="GND" device=""/>
-<part name="GND34" library="supply1" deviceset="GND" device=""/>
-<part name="GND35" library="supply1" deviceset="GND" device=""/>
-<part name="GND36" library="supply1" deviceset="GND" device=""/>
-<part name="GND37" library="supply1" deviceset="GND" device=""/>
 <part name="P+5" library="supply1" deviceset="VCC" device=""/>
-<part name="GND38" library="supply1" deviceset="GND" device=""/>
+<part name="NAME" library="supply1" deviceset="GND" device=""/>
 <part name="JP12" library="jumper" deviceset="JP1E" device=""/>
 <part name="JP13" library="jumper" deviceset="JP1E" device=""/>
-<part name="GND39" library="supply1" deviceset="GND" device=""/>
-<part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="JP11" library="jumper" deviceset="JP1E" device=""/>
 <part name="JP14" library="jumper" deviceset="JP1E" device=""/>
 <part name="JP15" library="jumper" deviceset="JP1E" device=""/>
+<part name="GNDA2" library="supply1" deviceset="GND" device=""/>
+<part name="GNDA4" library="supply1" deviceset="GND" device=""/>
+<part name="GNDA5" library="supply1" deviceset="GND" device=""/>
+<part name="GND_D1" library="supply1" deviceset="GND" device=""/>
+<part name="GND_D3" library="supply1" deviceset="GND" device=""/>
+<part name="GND_D4" library="supply1" deviceset="GND" device=""/>
+<part name="GND_D5" library="supply1" deviceset="GND" device=""/>
+<part name="GND_D6" library="supply1" deviceset="GND" device=""/>
+<part name="GND_D7" library="supply1" deviceset="GND" device=""/>
+<part name="GND_D8" library="supply1" deviceset="GND" device=""/>
+<part name="GND_D9" library="supply1" deviceset="GND" device=""/>
+<part name="GND_D10" library="supply1" deviceset="GND" device=""/>
+<part name="GND_D11" library="supply1" deviceset="GND" device=""/>
+<part name="GND_D12" library="supply1" deviceset="GND" device=""/>
+<part name="GND_D13" library="supply1" deviceset="GND" device=""/>
+<part name="GND_D14" library="supply1" deviceset="GND" device=""/>
+<part name="GND_D15" library="supply1" deviceset="GND" device=""/>
+<part name="GND_D16" library="supply1" deviceset="GND" device=""/>
+<part name="GND_D17" library="supply1" deviceset="GND" device=""/>
+<part name="GND_D18" library="supply1" deviceset="GND" device=""/>
+<part name="GND_D19" library="supply1" deviceset="GND" device=""/>
+<part name="GND_D20" library="supply1" deviceset="GND" device=""/>
+<part name="GND_D21" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6506,15 +6502,14 @@ type 0309, grid 2.5 mm</description>
 <instance part="P+1" gate="VCC" x="-68.58" y="-7.62"/>
 <instance part="P+2" gate="VCC" x="5.08" y="76.2"/>
 <instance part="GND1" gate="1" x="5.08" y="55.88"/>
-<instance part="GND2" gate="1" x="-68.58" y="-43.18"/>
+<instance part="GND2" gate="1" x="-68.58" y="-45.72"/>
 <instance part="IC2" gate="A" x="-53.34" y="35.56"/>
 <instance part="IC2" gate="P" x="-83.82" y="-33.02"/>
 <instance part="P+3" gate="VCC" x="-83.82" y="-20.32"/>
-<instance part="GND3" gate="1" x="-83.82" y="-43.18"/>
+<instance part="GND3" gate="1" x="-83.82" y="-45.72"/>
 <instance part="GND4" gate="1" x="-71.12" y="38.1" rot="R270"/>
 <instance part="JP1" gate="A" x="-30.48" y="38.1"/>
 <instance part="JP2" gate="A" x="-88.9" y="35.56"/>
-<instance part="GND5" gate="1" x="-27.94" y="27.94"/>
 <instance part="GND6" gate="1" x="-88.9" y="27.94"/>
 <instance part="FRAME1" gate="G$1" x="-106.68" y="-66.04"/>
 <instance part="USBMINI" gate="G$1" x="-91.44" y="83.82"/>
@@ -6523,20 +6518,14 @@ type 0309, grid 2.5 mm</description>
 <instance part="C3" gate="G$1" x="-38.1" y="83.82"/>
 <instance part="C4" gate="G$1" x="-27.94" y="83.82"/>
 <instance part="C5" gate="G$1" x="-17.78" y="83.82"/>
-<instance part="GND8" gate="1" x="-76.2" y="76.2"/>
-<instance part="GND9" gate="1" x="-38.1" y="73.66"/>
-<instance part="GND10" gate="1" x="-27.94" y="73.66"/>
-<instance part="GND11" gate="1" x="-17.78" y="73.66"/>
-<instance part="GND12" gate="1" x="-48.26" y="71.12"/>
-<instance part="GND20" gate="1" x="-71.12" y="73.66"/>
-<instance part="GND21" gate="1" x="-58.42" y="73.66"/>
+<instance part="GNDA" gate="1" x="-71.12" y="73.66"/>
 <instance part="JP4" gate="A" x="-45.72" y="81.28" rot="R270"/>
 <instance part="JP5" gate="A" x="-43.18" y="-15.24"/>
 <instance part="JP6" gate="A" x="-43.18" y="-38.1"/>
 <instance part="GND_D" gate="1" x="-48.26" y="-20.32"/>
-<instance part="GND14" gate="1" x="-35.56" y="-20.32"/>
-<instance part="GND15" gate="1" x="-45.72" y="-45.72"/>
-<instance part="GND16" gate="1" x="-38.1" y="-45.72"/>
+<instance part="GNDA1" gate="1" x="-35.56" y="-20.32"/>
+<instance part="GND_D2" gate="1" x="-45.72" y="-45.72"/>
+<instance part="GNDA3" gate="1" x="-38.1" y="-45.72"/>
 <instance part="R6" gate="G$1" x="-2.54" y="66.04"/>
 <instance part="R1" gate="G$1" x="83.82" y="99.06"/>
 <instance part="R2" gate="G$1" x="83.82" y="83.82"/>
@@ -6544,15 +6533,9 @@ type 0309, grid 2.5 mm</description>
 <instance part="R7" gate="G$1" x="83.82" y="53.34"/>
 <instance part="R8" gate="G$1" x="83.82" y="40.64"/>
 <instance part="R9" gate="G$1" x="83.82" y="27.94"/>
-<instance part="GND17" gate="1" x="91.44" y="83.82" rot="R90"/>
-<instance part="GND18" gate="1" x="91.44" y="68.58" rot="R90"/>
-<instance part="GND19" gate="1" x="91.44" y="53.34" rot="R90"/>
-<instance part="GND22" gate="1" x="91.44" y="40.64" rot="R90"/>
-<instance part="GND23" gate="1" x="91.44" y="27.94" rot="R90"/>
 <instance part="IC2" gate="B" x="-58.42" y="15.24"/>
 <instance part="GND24" gate="1" x="-73.66" y="17.78" rot="R270"/>
 <instance part="JP7" gate="A" x="-30.48" y="17.78"/>
-<instance part="GND26" gate="1" x="-27.94" y="12.7"/>
 <instance part="JP3" gate="A" x="-81.28" y="15.24"/>
 <instance part="JP8" gate="A" x="-40.64" y="10.16" rot="R90"/>
 <instance part="JP9" gate="A" x="-60.96" y="53.34"/>
@@ -6569,15 +6552,9 @@ type 0309, grid 2.5 mm</description>
 <instance part="R11" gate="G$1" x="40.64" y="-15.24"/>
 <instance part="R12" gate="G$1" x="40.64" y="-27.94"/>
 <instance part="R13" gate="G$1" x="40.64" y="-40.64"/>
-<instance part="GND13" gate="1" x="48.26" y="30.48" rot="R90"/>
-<instance part="GND25" gate="1" x="48.26" y="15.24" rot="R90"/>
-<instance part="GND27" gate="1" x="48.26" y="0" rot="R90"/>
-<instance part="GND28" gate="1" x="48.26" y="-15.24" rot="R90"/>
-<instance part="GND29" gate="1" x="48.26" y="-27.94" rot="R90"/>
-<instance part="GND30" gate="1" x="48.26" y="-40.64" rot="R90"/>
 <instance part="IC3" gate="P" x="-58.42" y="-30.48"/>
 <instance part="P+4" gate="VCC" x="-58.42" y="-7.62"/>
-<instance part="GND31" gate="1" x="-58.42" y="-43.18"/>
+<instance part="GND31" gate="1" x="-58.42" y="-45.72"/>
 <instance part="IC4" gate="A" x="111.76" y="99.06"/>
 <instance part="IC4" gate="B" x="111.76" y="83.82"/>
 <instance part="IC4" gate="C" x="111.76" y="53.34"/>
@@ -6590,22 +6567,37 @@ type 0309, grid 2.5 mm</description>
 <instance part="R17" gate="G$1" x="134.62" y="53.34"/>
 <instance part="R18" gate="G$1" x="134.62" y="40.64"/>
 <instance part="R19" gate="G$1" x="134.62" y="27.94"/>
-<instance part="GND32" gate="1" x="142.24" y="99.06" rot="R90"/>
-<instance part="GND33" gate="1" x="142.24" y="83.82" rot="R90"/>
-<instance part="GND34" gate="1" x="142.24" y="68.58" rot="R90"/>
-<instance part="GND35" gate="1" x="142.24" y="53.34" rot="R90"/>
-<instance part="GND36" gate="1" x="142.24" y="40.64" rot="R90"/>
-<instance part="GND37" gate="1" x="142.24" y="27.94" rot="R90"/>
 <instance part="IC4" gate="P" x="-76.2" y="-30.48"/>
 <instance part="P+5" gate="VCC" x="-76.2" y="-7.62"/>
-<instance part="GND38" gate="1" x="-76.2" y="-43.18"/>
+<instance part="NAME" gate="1" x="-76.2" y="-45.72"/>
 <instance part="JP12" gate="A" x="-10.16" y="91.44"/>
 <instance part="JP13" gate="A" x="2.54" y="91.44"/>
-<instance part="GND39" gate="1" x="5.08" y="83.82"/>
-<instance part="GND7" gate="1" x="93.98" y="99.06" rot="R90"/>
 <instance part="JP11" gate="A" x="-78.74" y="-15.24" rot="R90"/>
 <instance part="JP14" gate="A" x="-71.12" y="-15.24" rot="R90"/>
 <instance part="JP15" gate="A" x="-60.96" y="-15.24" rot="R90"/>
+<instance part="GNDA2" gate="1" x="-27.94" y="27.94"/>
+<instance part="GNDA4" gate="1" x="-27.94" y="10.16"/>
+<instance part="GNDA5" gate="1" x="5.08" y="83.82"/>
+<instance part="GND_D1" gate="1" x="48.26" y="-27.94" rot="R90"/>
+<instance part="GND_D3" gate="1" x="48.26" y="-40.64" rot="R90"/>
+<instance part="GND_D4" gate="1" x="48.26" y="-15.24" rot="R90"/>
+<instance part="GND_D5" gate="1" x="48.26" y="0" rot="R90"/>
+<instance part="GND_D6" gate="1" x="48.26" y="15.24" rot="R90"/>
+<instance part="GND_D7" gate="1" x="48.26" y="30.48" rot="R90"/>
+<instance part="GND_D8" gate="1" x="91.44" y="27.94" rot="R90"/>
+<instance part="GND_D9" gate="1" x="91.44" y="40.64" rot="R90"/>
+<instance part="GND_D10" gate="1" x="91.44" y="53.34" rot="R90"/>
+<instance part="GND_D11" gate="1" x="91.44" y="68.58" rot="R90"/>
+<instance part="GND_D12" gate="1" x="91.44" y="83.82" rot="R90"/>
+<instance part="GND_D13" gate="1" x="91.44" y="99.06" rot="R90"/>
+<instance part="GND_D14" gate="1" x="142.24" y="27.94" rot="R90"/>
+<instance part="GND_D15" gate="1" x="142.24" y="40.64" rot="R90"/>
+<instance part="GND_D16" gate="1" x="142.24" y="40.64" rot="R90"/>
+<instance part="GND_D17" gate="1" x="142.24" y="53.34" rot="R90"/>
+<instance part="GND_D18" gate="1" x="142.24" y="68.58" rot="R90"/>
+<instance part="GND_D19" gate="1" x="142.24" y="68.58" rot="R90"/>
+<instance part="GND_D20" gate="1" x="142.24" y="83.82" rot="R90"/>
+<instance part="GND_D21" gate="1" x="142.24" y="99.06" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -6762,199 +6754,6 @@ type 0309, grid 2.5 mm</description>
 <wire x1="-58.42" y1="-12.7" x2="-58.42" y2="-10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="GND" class="0">
-<segment>
-<pinref part="U1" gate="A" pin="GND"/>
-<pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="5.08" y1="58.42" x2="5.08" y2="60.96" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="IC1" gate="P" pin="GND"/>
-<pinref part="GND2" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="IC2" gate="P" pin="V-"/>
-<pinref part="GND3" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="IC2" gate="A" pin="+IN"/>
-<pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="-60.96" y1="38.1" x2="-68.58" y2="38.1" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="JP2" gate="A" pin="1"/>
-<pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="-88.9" y1="33.02" x2="-88.9" y2="30.48" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND5" gate="1" pin="GND"/>
-<pinref part="JP1" gate="A" pin="2"/>
-<wire x1="-27.94" y1="30.48" x2="-27.94" y2="35.56" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND8" gate="1" pin="GND"/>
-<pinref part="USBMINI" gate="G$1" pin="GND"/>
-<wire x1="-81.28" y1="78.74" x2="-76.2" y2="78.74" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="C3" gate="G$1" pin="2"/>
-<pinref part="GND9" gate="1" pin="GND"/>
-<wire x1="-38.1" y1="76.2" x2="-38.1" y2="78.74" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="C4" gate="G$1" pin="2"/>
-<pinref part="GND10" gate="1" pin="GND"/>
-<wire x1="-27.94" y1="76.2" x2="-27.94" y2="78.74" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="C5" gate="G$1" pin="2"/>
-<pinref part="GND11" gate="1" pin="GND"/>
-<wire x1="-17.78" y1="76.2" x2="-17.78" y2="78.74" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="C2" gate="G$1" pin="2"/>
-<pinref part="GND21" gate="1" pin="GND"/>
-<wire x1="-58.42" y1="76.2" x2="-58.42" y2="78.74" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND12" gate="1" pin="GND"/>
-<pinref part="JP4" gate="A" pin="2"/>
-<wire x1="-48.26" y1="73.66" x2="-48.26" y2="78.74" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="JP5" gate="A" pin="2"/>
-<pinref part="GND14" gate="1" pin="GND"/>
-<wire x1="-40.64" y1="-17.78" x2="-35.56" y2="-17.78" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="JP6" gate="A" pin="1"/>
-<pinref part="GND15" gate="1" pin="GND"/>
-<wire x1="-43.18" y1="-40.64" x2="-45.72" y2="-43.18" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="JP6" gate="A" pin="2"/>
-<pinref part="GND16" gate="1" pin="GND"/>
-<wire x1="-40.64" y1="-40.64" x2="-38.1" y2="-43.18" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="R2" gate="G$1" pin="2"/>
-<pinref part="GND17" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="R3" gate="G$1" pin="2"/>
-<pinref part="GND18" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="R7" gate="G$1" pin="2"/>
-<pinref part="GND19" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="R8" gate="G$1" pin="2"/>
-<pinref part="GND22" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="R9" gate="G$1" pin="2"/>
-<pinref part="GND23" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="IC2" gate="B" pin="+IN"/>
-<pinref part="GND24" gate="1" pin="GND"/>
-<wire x1="-66.04" y1="17.78" x2="-71.12" y2="17.78" width="0.1524" layer="91"/>
-<junction x="-71.12" y="17.78"/>
-</segment>
-<segment>
-<pinref part="JP7" gate="A" pin="2"/>
-<pinref part="GND26" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="R4" gate="G$1" pin="2"/>
-<pinref part="GND13" gate="1" pin="GND"/>
-<junction x="45.72" y="30.48"/>
-</segment>
-<segment>
-<pinref part="R5" gate="G$1" pin="2"/>
-<pinref part="GND25" gate="1" pin="GND"/>
-<junction x="45.72" y="15.24"/>
-</segment>
-<segment>
-<pinref part="R10" gate="G$1" pin="2"/>
-<pinref part="GND27" gate="1" pin="GND"/>
-<junction x="45.72" y="0"/>
-</segment>
-<segment>
-<pinref part="R11" gate="G$1" pin="2"/>
-<pinref part="GND28" gate="1" pin="GND"/>
-<junction x="45.72" y="-15.24"/>
-</segment>
-<segment>
-<pinref part="R12" gate="G$1" pin="2"/>
-<pinref part="GND29" gate="1" pin="GND"/>
-<junction x="45.72" y="-27.94"/>
-</segment>
-<segment>
-<pinref part="R13" gate="G$1" pin="2"/>
-<pinref part="GND30" gate="1" pin="GND"/>
-<junction x="45.72" y="-40.64"/>
-</segment>
-<segment>
-<pinref part="IC3" gate="P" pin="GND"/>
-<pinref part="GND31" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="R14" gate="G$1" pin="2"/>
-<pinref part="GND32" gate="1" pin="GND"/>
-<junction x="139.7" y="99.06"/>
-</segment>
-<segment>
-<pinref part="R15" gate="G$1" pin="2"/>
-<pinref part="GND33" gate="1" pin="GND"/>
-<junction x="139.7" y="83.82"/>
-</segment>
-<segment>
-<pinref part="R16" gate="G$1" pin="2"/>
-<pinref part="GND34" gate="1" pin="GND"/>
-<junction x="139.7" y="68.58"/>
-</segment>
-<segment>
-<pinref part="R17" gate="G$1" pin="2"/>
-<pinref part="GND35" gate="1" pin="GND"/>
-<junction x="139.7" y="53.34"/>
-</segment>
-<segment>
-<pinref part="R18" gate="G$1" pin="2"/>
-<pinref part="GND36" gate="1" pin="GND"/>
-<junction x="139.7" y="40.64"/>
-</segment>
-<segment>
-<pinref part="R19" gate="G$1" pin="2"/>
-<pinref part="GND37" gate="1" pin="GND"/>
-<junction x="139.7" y="27.94"/>
-</segment>
-<segment>
-<pinref part="IC4" gate="P" pin="GND"/>
-<pinref part="GND38" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="JP5" gate="A" pin="1"/>
-<pinref part="GND_D" gate="1" pin="GND"/>
-<wire x1="-48.26" y1="-17.78" x2="-43.18" y2="-17.78" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="JP13" gate="A" pin="2"/>
-<pinref part="GND39" gate="1" pin="GND"/>
-<wire x1="5.08" y1="86.36" x2="5.08" y2="88.9" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND20" gate="1" pin="GND"/>
-<pinref part="C1" gate="G$1" pin="2"/>
-<wire x1="-71.12" y1="76.2" x2="-71.12" y2="78.74" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="R1" gate="G$1" pin="2"/>
-<pinref part="GND7" gate="1" pin="GND"/>
-<wire x1="91.44" y1="99.06" x2="88.9" y2="99.06" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$2" class="0">
 <segment>
 <wire x1="-78.74" y1="33.02" x2="-78.74" y2="50.8" width="0.1524" layer="91"/>
@@ -7011,6 +6810,7 @@ type 0309, grid 2.5 mm</description>
 <segment>
 <pinref part="IC1" gate="A" pin="O"/>
 <pinref part="R1" gate="G$1" pin="1"/>
+<junction x="78.74" y="99.06"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -7175,6 +6975,209 @@ type 0309, grid 2.5 mm</description>
 <pinref part="IC3" gate="P" pin="VCC"/>
 <pinref part="JP15" gate="A" pin="1"/>
 <wire x1="-58.42" y1="-20.32" x2="-58.42" y2="-15.24" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="GNDA" class="0">
+<segment>
+<pinref part="JP5" gate="A" pin="2"/>
+<pinref part="GNDA1" gate="1" pin="GND"/>
+<wire x1="-40.64" y1="-17.78" x2="-35.56" y2="-17.78" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="JP6" gate="A" pin="2"/>
+<pinref part="GNDA3" gate="1" pin="GND"/>
+<wire x1="-40.64" y1="-40.64" x2="-38.1" y2="-43.18" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GNDA" gate="1" pin="GND"/>
+<pinref part="USBMINI" gate="G$1" pin="GND"/>
+<wire x1="-81.28" y1="78.74" x2="-71.12" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="C5" gate="G$1" pin="2"/>
+<wire x1="-17.78" y1="76.2" x2="-17.78" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="C4" gate="G$1" pin="2"/>
+<wire x1="-27.94" y1="76.2" x2="-27.94" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="76.2" x2="-27.94" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="C3" gate="G$1" pin="2"/>
+<wire x1="-38.1" y1="76.2" x2="-38.1" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="76.2" x2="-38.1" y2="76.2" width="0.1524" layer="91"/>
+<junction x="-27.94" y="76.2"/>
+<pinref part="JP4" gate="A" pin="2"/>
+<wire x1="-48.26" y1="76.2" x2="-48.26" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="76.2" x2="-48.26" y2="76.2" width="0.1524" layer="91"/>
+<junction x="-38.1" y="76.2"/>
+<junction x="-48.26" y="76.2"/>
+<pinref part="C2" gate="G$1" pin="2"/>
+<wire x1="-58.42" y1="76.2" x2="-58.42" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="-48.26" y1="76.2" x2="-58.42" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="C1" gate="G$1" pin="2"/>
+<wire x1="-71.12" y1="76.2" x2="-71.12" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="-58.42" y1="76.2" x2="-60.96" y2="76.2" width="0.1524" layer="91"/>
+<junction x="-58.42" y="76.2"/>
+<junction x="-71.12" y="76.2"/>
+<junction x="-60.96" y="76.2"/>
+<wire x1="-60.96" y1="76.2" x2="-71.12" y2="76.2" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="JP13" gate="A" pin="2"/>
+<wire x1="5.08" y1="86.36" x2="5.08" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="GNDA5" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="JP1" gate="A" pin="2"/>
+<wire x1="-27.94" y1="30.48" x2="-27.94" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="GNDA2" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="JP2" gate="A" pin="1"/>
+<pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="-88.9" y1="33.02" x2="-88.9" y2="30.48" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="JP7" gate="A" pin="2"/>
+<pinref part="GNDA4" gate="1" pin="GND"/>
+<wire x1="-27.94" y1="12.7" x2="-27.94" y2="15.24" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC2" gate="P" pin="V-"/>
+<pinref part="GND3" gate="1" pin="GND"/>
+<wire x1="-83.82" y1="-43.18" x2="-83.82" y2="-40.64" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC2" gate="B" pin="+IN"/>
+<pinref part="GND24" gate="1" pin="GND"/>
+<wire x1="-66.04" y1="17.78" x2="-71.12" y2="17.78" width="0.1524" layer="91"/>
+<junction x="-71.12" y="17.78"/>
+</segment>
+<segment>
+<pinref part="IC2" gate="A" pin="+IN"/>
+<pinref part="GND4" gate="1" pin="GND"/>
+<wire x1="-60.96" y1="38.1" x2="-68.58" y2="38.1" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U1" gate="A" pin="GND"/>
+<pinref part="GND1" gate="1" pin="GND"/>
+<wire x1="5.08" y1="58.42" x2="5.08" y2="60.96" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="GND_D" class="0">
+<segment>
+<pinref part="R2" gate="G$1" pin="2"/>
+<pinref part="GND_D12" gate="1" pin="GND"/>
+<junction x="88.9" y="83.82"/>
+</segment>
+<segment>
+<pinref part="R3" gate="G$1" pin="2"/>
+<pinref part="GND_D11" gate="1" pin="GND"/>
+<junction x="88.9" y="68.58"/>
+</segment>
+<segment>
+<pinref part="R7" gate="G$1" pin="2"/>
+<pinref part="GND_D10" gate="1" pin="GND"/>
+<junction x="88.9" y="53.34"/>
+</segment>
+<segment>
+<pinref part="R9" gate="G$1" pin="2"/>
+<pinref part="GND_D8" gate="1" pin="GND"/>
+<junction x="88.9" y="27.94"/>
+</segment>
+<segment>
+<pinref part="R8" gate="G$1" pin="2"/>
+<pinref part="GND_D9" gate="1" pin="GND"/>
+<junction x="88.9" y="40.64"/>
+</segment>
+<segment>
+<pinref part="R19" gate="G$1" pin="2"/>
+<pinref part="GND_D14" gate="1" pin="GND"/>
+<junction x="139.7" y="27.94"/>
+</segment>
+<segment>
+<pinref part="R18" gate="G$1" pin="2"/>
+<pinref part="GND_D15" gate="1" pin="GND"/>
+<pinref part="GND_D16" gate="1" pin="GND"/>
+<junction x="139.7" y="40.64"/>
+<pinref part="GND_D16" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="R15" gate="G$1" pin="2"/>
+<pinref part="GND_D20" gate="1" pin="GND"/>
+<junction x="139.7" y="83.82"/>
+</segment>
+<segment>
+<pinref part="R14" gate="G$1" pin="2"/>
+<pinref part="GND_D21" gate="1" pin="GND"/>
+<junction x="139.7" y="99.06"/>
+</segment>
+<segment>
+<pinref part="IC4" gate="P" pin="GND"/>
+<pinref part="NAME" gate="1" pin="GND"/>
+<wire x1="-76.2" y1="-43.18" x2="-76.2" y2="-40.64" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="P" pin="GND"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+<wire x1="-68.58" y1="-43.18" x2="-68.58" y2="-40.64" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC3" gate="P" pin="GND"/>
+<pinref part="GND31" gate="1" pin="GND"/>
+<wire x1="-58.42" y1="-43.18" x2="-58.42" y2="-40.64" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="JP5" gate="A" pin="1"/>
+<pinref part="GND_D" gate="1" pin="GND"/>
+<wire x1="-48.26" y1="-17.78" x2="-43.18" y2="-17.78" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R17" gate="G$1" pin="2"/>
+<pinref part="GND_D17" gate="1" pin="GND"/>
+<junction x="139.7" y="53.34"/>
+</segment>
+<segment>
+<pinref part="R16" gate="G$1" pin="2"/>
+<pinref part="GND_D18" gate="1" pin="GND"/>
+<pinref part="GND_D19" gate="1" pin="GND"/>
+<junction x="139.7" y="68.58"/>
+<pinref part="GND_D19" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="R13" gate="G$1" pin="2"/>
+<pinref part="GND_D3" gate="1" pin="GND"/>
+<junction x="45.72" y="-40.64"/>
+</segment>
+<segment>
+<pinref part="R12" gate="G$1" pin="2"/>
+<pinref part="GND_D1" gate="1" pin="GND"/>
+<junction x="45.72" y="-27.94"/>
+</segment>
+<segment>
+<pinref part="R11" gate="G$1" pin="2"/>
+<pinref part="GND_D4" gate="1" pin="GND"/>
+<junction x="45.72" y="-15.24"/>
+</segment>
+<segment>
+<pinref part="R10" gate="G$1" pin="2"/>
+<pinref part="GND_D5" gate="1" pin="GND"/>
+<junction x="45.72" y="0"/>
+</segment>
+<segment>
+<pinref part="R4" gate="G$1" pin="2"/>
+<pinref part="GND_D7" gate="1" pin="GND"/>
+<junction x="45.72" y="30.48"/>
+</segment>
+<segment>
+<pinref part="R5" gate="G$1" pin="2"/>
+<pinref part="GND_D6" gate="1" pin="GND"/>
+<junction x="45.72" y="15.24"/>
+</segment>
+<segment>
+<pinref part="R1" gate="G$1" pin="2"/>
+<pinref part="GND_D13" gate="1" pin="GND"/>
+<junction x="88.9" y="99.06"/>
+</segment>
+<segment>
+<pinref part="JP6" gate="A" pin="1"/>
+<pinref part="GND_D2" gate="1" pin="GND"/>
+<wire x1="-43.18" y1="-40.64" x2="-45.72" y2="-43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
