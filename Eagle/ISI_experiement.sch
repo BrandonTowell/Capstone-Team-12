@@ -9546,8 +9546,8 @@ at 30/07/2012 17:04:24</description>
 <wire x1="307.34" y1="22.86" x2="444.5" y2="22.86" width="0.4064" layer="94"/>
 <text x="320.04" y="43.18" size="5.08" layer="95">ISI Experiment</text>
 <text x="342.9" y="27.94" size="5.08" layer="95">T12</text>
-<text x="360.68" y="2.54" size="5.08" layer="95">Rev: 0.3</text>
-<text x="309.88" y="2.54" size="3.81" layer="95">Date: 4/04/2015</text>
+<text x="360.68" y="2.54" size="5.08" layer="95">Rev: 1.2</text>
+<text x="309.88" y="2.54" size="3.81" layer="95">Date: 6/04/2015</text>
 <text x="309.88" y="15.24" size="3.81" layer="95">Project: Intel E3V Board/ Capstone Project</text>
 <text x="281.94" y="213.36" size="1.778" layer="91">TPS796 5V to 3.3V Regulator</text>
 <text x="210.82" y="170.18" size="1.778" layer="91">5V Test Point</text>

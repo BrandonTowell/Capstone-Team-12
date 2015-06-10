@@ -137,7 +137,7 @@
 <text x="50.1396" y="13.1064" size="1.778" layer="21">ISI/ Crosstalk Experimentation Board</text>
 <text x="51.5112" y="10.0584" size="1.778" layer="21">Portland State University &amp; Intel Co.</text>
 <text x="51.6636" y="4.1148" size="1.778" layer="21">Capstone Program 2015
-Rev 1.0</text>
+Rev 1.2</text>
 </plain>
 <libraries>
 <library name="adafruit">
@@ -960,7 +960,10 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="NAME" x="72.6694" y="43.5864" size="1.27" layer="25" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="70.866" y="48.133" size="1.27" layer="27" ratio="10" rot="R180"/>
 </element>
-<element name="JP6" library="adafruit" package="2X04" value="" x="52.07" y="73.66" rot="R270"/>
+<element name="JP6" library="adafruit" package="2X04" value="" x="52.07" y="73.66" smashed="yes" rot="R270">
+<attribute name="NAME" x="46.3804" y="77.1906" size="1.27" layer="25" ratio="10"/>
+<attribute name="VALUE" x="47.625" y="78.74" size="1.27" layer="27" rot="R270"/>
+</element>
 <element name="INA1" library="jumper" package="JP1" value="" x="38.5064" y="37.0332" rot="R180"/>
 <element name="INA3" library="jumper" package="JP1" value="" x="68.406" y="54.356" smashed="yes" rot="R270">
 <attribute name="NAME" x="72.3138" y="52.912" size="1.27" layer="25" ratio="10" rot="R90"/>
